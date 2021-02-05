@@ -1,0 +1,13 @@
+// assets and script style addons
+@import "libs/jquery.fancybox.scss";
+@import "libs/slick.scss";
+
+// global styles
+@import "reset.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "scaffolding.scss";
+@import "fonts.scss";
+
+// BEM blocks
+@import "../../blocks/form/form.scss";

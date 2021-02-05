@@ -1,0 +1,8 @@
+build/*
+node_modules/
+*.log
+*.rar
+*.zip
+.idea
+.idea/vcs.xml
+package-lock.json

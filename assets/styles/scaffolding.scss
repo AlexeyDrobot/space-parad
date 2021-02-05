@@ -1,0 +1,101 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+html {
+	box-sizing: border-box;
+}
+
+// Экспериментально для отмены проскролла на элементах форм в iOS Safari
+@media (max-width: 600px) {
+	html {
+		height: 100%;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+//----------------------------------------------------------------------
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	//transition: 0.3s;
+
+	// scrollbar in Firefox
+	scrollbar-color: black gray;
+	scrollbar-width: thin;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+img.lazy {
+	transition: 0s;
+}
+
+img.lazy[data-src] {
+	opacity: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	color: $text-color;
+}
+
+a {
+	padding-bottom: 2px;
+	color: $link-color;
+	text-decoration: none;
+}
+
+*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
+	background-color: gray;
+}
+
+*::-webkit-scrollbar {
+	width: 5px;
+	background-color: gray;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-image: -webkit-gradient(linear,
+		left bottom,
+		left top,
+		color-stop(0.44, black),
+		color-stop(0.86, black));
+}
+
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+}
+
+.wrapper {
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
