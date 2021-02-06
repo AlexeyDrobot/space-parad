@@ -12,6 +12,7 @@
 	left: 0;
 	right: 0;
 	background: $light;
+	z-index: 2;
 }
 
 .header__logo-wrap {
@@ -30,6 +31,19 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.header__menu-btn {
+	background: $light;
+	border: 0;
+	cursor: pointer;
+	padding: 10px;
+
+	&:hover {
+		path {
+			fill: $gray-2
+		}
+	}
 }
 
 @media (max-width: 991px) {

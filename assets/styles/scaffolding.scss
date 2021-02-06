@@ -36,8 +36,9 @@ img.lazy[data-src] {
 }
 
 body {
-	font-family: 'Nunito', Arial, sans-serif;
+	font-family: $main-font;
 	font-size: 18px;
+	font-weight: 300;
 	color: $text-color;
 }
 
@@ -48,6 +49,10 @@ a {
 
 .button {
 	transition: 0.3s;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
 }
 
 path {
