@@ -24,11 +24,17 @@ $(document).ready(function () {
 		});
 	});
 
+	// Слайдер на главной странице
 	$('.intro-slider__body').slick({
 		centerMode: false,
 		slidesToShow: 1,
-		nav: false,
+		arrows: false,
 		dots: true
+	});
+
+	//
+	$('.js_lang-toggler').on('click', function () {
+		$(this).find('.lang-toggler__variants').slideToggle(300)
 	});
 
 	// Скрипт плавной прокрутки до якорей

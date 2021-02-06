@@ -3,4 +3,25 @@
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/mixins.scss";
 
-.lang-toggler {}
+.lang-toggler {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 18px;
+	font-family: $title-font;
+	width: 80px;
+	text-align: center;
+}
+
+.lang-toggler__variants {
+	display: none;
+	text-align: center;
+}
+
+.lang-toggler__option {
+	display: block;
+	margin-bottom: 17px;
+	color: $gray-1;
+	font-size: 14px;
+}
