@@ -253,8 +253,9 @@
 	}
 	.menu__close {
 		width: 66px;
-		height: 65px;
+		height: 66px;
 		background: #4E4E4E;
+		border-bottom: 1px solid $gray-2;
 	}
 	.menu__list-wrap {
 		display: flex;

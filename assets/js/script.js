@@ -48,7 +48,7 @@ $(document).ready(function () {
 	});
 
 	// Скрипт плавной прокрутки до якорей
-	$(function () {
+	/*$(function () {
 		$("a[href^='#']").click(function () {
 			var _href = $(this).attr("href");
 
@@ -57,5 +57,5 @@ $(document).ready(function () {
 			});
 			return false;
 		});
-	});
+	});*/
 });

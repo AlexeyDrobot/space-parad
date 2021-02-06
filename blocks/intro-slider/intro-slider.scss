@@ -5,6 +5,10 @@
 
 .intro-slider {
 
+	.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+
 	.slick-dots {
 		bottom: 45px;
 		right: 140px;
@@ -38,10 +42,22 @@
 	}
 }
 
+.intro-slider__body {
+	background: $gray-5;
+	opacity: 0;
+	transition: 1s;
+
+	&.slick-initialized {
+		opacity: 1;
+	}
+}
+
 .intro-slider__item {
 	position: relative;
 	outline: none;
 	cursor: pointer;
+	width: 100%;
+	height: calc(100vh - 80px);
 }
 
 .intro-slider__item-image {
@@ -107,6 +123,9 @@
 				}
 			}
 		}
+	}
+	.intro-slider__item {
+		height: calc(100vh - 66px);
 	}
 	.intro-slider__item-info {
 		padding: 0 80px 20px 20px;
