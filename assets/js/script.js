@@ -24,6 +24,13 @@ $(document).ready(function () {
 		});
 	});
 
+	$('.intro-slider__body').slick({
+		centerMode: false,
+		slidesToShow: 1,
+		nav: false,
+		dots: true
+	});
+
 	// Скрипт плавной прокрутки до якорей
 	$(function () {
 		$("a[href^='#']").click(function () {
