@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока layout, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока layout, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/mixins.scss";
@@ -26,7 +26,6 @@
 .layout__content {
 	flex-grow: 1;
 	border-right: 1px solid $gray-5;
-	padding: 25px;
 }
 
 .layout__r-side {
@@ -44,6 +43,7 @@
 	}
 	.layout__r-side {
 		width: 0;
+		min-width: unset;
 	}
 	.layout__content {
 		border: none;
