@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-filter, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.catalog-filter {
+	display: flex;
+
+	.catalog-filter__select {
+		width: 100%;
+		min-height: 97px;
+		display: flex;
+		align-items: center;
+
+		&:before {
+			content: attr(aria-label);
+		}
+	}
+}
+
+.catalog-filter__item {
+	width: 25%;
+}

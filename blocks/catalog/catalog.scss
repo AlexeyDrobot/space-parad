@@ -7,7 +7,7 @@
 	display: block;
 }
 
-.catalog__breadcrumb-flex {
+.catalog_first-section {
 	display: flex;
 	max-width: 1360px;
 	min-height: 161px;
@@ -26,4 +26,39 @@
 	font-size: 16px;
 	line-height: 1.8;
 	color: $gray-3;
+}
+
+.catalog__second-section {
+	background-color: $gray-8;
+}
+
+.catalog__container {
+	max-width: 1360px;
+	min-height: 161px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.catalog__title {
+	font-size: 32px;
+	margin-bottom: 25px;
+	line-height: 1.2;
+	font-family: "Merriweather";
+}
+
+.catalog__text {
+	font-size: 16px;
+	line-height: 1.8;
+	color: $gray-3;
+
+	@at-root {
+		.catalog__second-section #{&} {
+			max-width: 665px;
+		}
+	}
+}
+
+.catalog__products-section {
+	max-width: 1700px;
+	margin: 0 auto;
 }

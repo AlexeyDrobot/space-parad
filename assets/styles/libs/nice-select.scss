@@ -47,26 +47,26 @@ $arrow_color: #252525 !default;
     border-color: darken($gray_light, 5%);
   }
   &:active, &:focus {
-    border-color: $accent-color;
+    border-color: $gray-3;
   }
   // Arrow
-  &:after { 
+  &:after {
     border-bottom: 2px solid $arrow_color;
     border-right: 2px solid $arrow_color;
     content: '';
-    display: block; 
+    display: block;
     height: 5px;
     margin-top: -4px;
     pointer-events: none;
-    position: absolute; 
-    right: 12px; 
-    top: 50%; 
+    position: absolute;
+    right: 12px;
+    top: 50%;
     transform-origin: 66% 66%;
     transform: rotate(45deg);
     transition: all 0.15s ease-in-out;
     width: 5px;
   }
-  
+
   &.open {
     @extend :active;
     &:after {
@@ -82,11 +82,11 @@ $arrow_color: #252525 !default;
     border-color: lighten($gray_light, 2%);
     color: $gray;
     pointer-events: none;
-    &:after { 
+    &:after {
       border-color: lighten($arrow_color, 20%);
     }
   }
-  
+
   // Modifiers
   &.wide {
     width: 100%;
@@ -106,7 +106,7 @@ $arrow_color: #252525 !default;
     font-size: $font_size_small;
     height: $input_height_small;
     line-height: $input_height_small - 2;
-    &:after { 
+    &:after {
       height: 4px;
       width: 4px;
     }
@@ -115,7 +115,7 @@ $arrow_color: #252525 !default;
       min-height: $input_height_small - 2;
     }
   }
-  
+
   // List and options
   .list {
     background-color: #fff;
@@ -148,10 +148,10 @@ $arrow_color: #252525 !default;
     padding-right: $dropdown_padding + 11;
     text-align: left;
     transition: all 0.2s;
-    &:hover, &.focus, &.selected.focus { 
+    &:hover, &.focus, &.selected.focus {
       background-color: $gray_lighter;
     }
-    &.selected { 
+    &.selected {
       font-weight: bold;
     }
     &.disabled {
