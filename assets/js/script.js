@@ -24,11 +24,27 @@ $(document).ready(function () {
 		});
 	});
 
+	// Слайдер на главной странице
 	$('.intro-slider__body').slick({
 		centerMode: false,
 		slidesToShow: 1,
-		nav: false,
+		arrows: false,
 		dots: true
+	});
+
+	// Кнопка переключения языка
+	$('.js_lang-toggler').on('click', function () {
+		$(this).find('.lang-toggler__variants').slideToggle(300)
+	});
+
+	// Кнопка открытия меню
+	$('.js_menu-trigger').on('click', function () {
+		var menu = $('.menu');
+		menu.addClass('menu--active');
+
+		$('.js_menu-close').on('click', function () {
+			menu.removeClass('menu--active');
+		})
 	});
 
 	// Скрипт плавной прокрутки до якорей
