@@ -1,18 +1,3 @@
-// assets and script style addons
-@import "libs/jquery.fancybox.scss";
-@import "libs/slick.scss";
-
-// global styles
-@import "reset.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "scaffolding.scss";
-@import "fonts.scss";
-
 // BEM blocks
-@import "../../blocks/form/form.scss";
-
-
-// Временные диспетчеры блоков
-@import "style-starushchenko.scss";
-@import "style-zhukouski.scss";
+@import "../../blocks/catalog/catalog.scss";
+@import "../../blocks/footer/footer.scss";
