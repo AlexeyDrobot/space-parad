@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока breadcrumb, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.breadcrumb {
+
+}
+
+.breadcrumb__list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.breadcrumb__item {
+	font-size: 18px;
+	margin-bottom: 10px;
+	line-height: 1.2;
+
+	&:not(:last-of-type):after {
+		content: '/';
+		margin-left: 5px;
+		margin-right: 7px;
+		color: $gray-3;
+	}
+
+	a {
+		color: $gray-3;
+
+		span {
+			transition: none;
+		}
+	}
+
+	&:last-of-type span {
+		font-weight: bold;
+		color: $gray-1;
+	}
+
+
+	&:not(:last-of-type):hover a {
+		text-decoration: underline;
+	}
+}

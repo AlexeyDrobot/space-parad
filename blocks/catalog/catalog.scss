@@ -1,6 +1,29 @@
-// В этом файле должны быть стили для БЭМ-блока catalog, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока catalog, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/mixins.scss";
 
-.catalog {}
+.catalog {
+	display: block;
+}
+
+.catalog__breadcrumb-flex {
+	display: flex;
+	max-width: 1360px;
+	min-height: 161px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.catalog__breadcrumb-wrap {
+	width: 100%;
+	max-width: 210px;
+	padding-right: 25px;
+	box-sizing: border-box;
+}
+
+.catalog__qoute {
+	font-size: 16px;
+	line-height: 1.8;
+	color: $gray-3;
+}
