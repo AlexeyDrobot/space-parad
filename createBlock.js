@@ -6,7 +6,7 @@
 const fs = require('fs');
 const mkdirp = require('mkdirp');
 const blockName = process.argv[2];          // получим имя блока
-const defaultExtensions = ['scss', 'html', 'img', 'md']; // расширения по умолчанию
+const defaultExtensions = ['scss', 'html']; // расширения по умолчанию
 const extensions = uniqueArray(defaultExtensions.concat(process.argv.slice(3)));  // добавим введенные при вызове расширения (если есть)
 
 // Если есть имя блока

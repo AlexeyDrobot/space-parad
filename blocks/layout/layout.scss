@@ -1,0 +1,55 @@
+// В этом файле должны быть стили для БЭМ-блока layout, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.layout {
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	padding-top: 80px;
+}
+
+.layout__row {
+	display: flex;
+	align-items: stretch;
+	flex-grow: 1;
+}
+
+.layout__l-side {
+	width: 140px;
+	border-right: 1px solid $gray-5;
+}
+
+.layout__content {
+	flex-grow: 1;
+	border-right: 1px solid $gray-5;
+	padding: 25px;
+}
+
+.layout__r-side {
+	width: 80px;
+	min-width: 80px;
+}
+
+@media (max-width: 991px) {
+	.layout {
+		padding-top: 66px;
+	}
+	.layout__l-side {
+		width: 0;
+		border: none;
+	}
+	.layout__r-side {
+		width: 0;
+	}
+	.layout__content {
+		border: none;
+		padding: 0;
+	}
+	.layout__to-top {
+		display: none;
+	}
+}
