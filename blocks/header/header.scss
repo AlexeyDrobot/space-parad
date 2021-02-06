@@ -1,0 +1,58 @@
+// В этом файле должны быть стили для БЭМ-блока header, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.header {
+	height: 80px;
+	max-height: 80px;
+	border-bottom: 1px solid $gray-5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: $light;
+}
+
+.header__logo-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		path {
+			fill: $gray-3
+		}
+	}
+}
+
+.header__menu-btn-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 991px) {
+	.header {
+		height: 66px;
+		max-height: 66px;
+
+		.layout__content {
+			flex-grow: unset;
+		}
+	}
+	.header__logo-wrap {
+
+		&.layout__l-side {
+			width: 150px;
+			flex-grow: 1;
+			justify-content: flex-start;
+			padding: 20px;
+		}
+	}
+	.header__menu-btn-wrap {
+		&.layout__r-side {
+			width: 66px;
+		}
+	}
+}
