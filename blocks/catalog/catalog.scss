@@ -43,7 +43,7 @@
 	font-size: 32px;
 	margin-bottom: 25px;
 	line-height: 1.2;
-	font-family: "Merriweather";
+	font-family: $title-font;
 }
 
 .catalog__text {
@@ -60,5 +60,128 @@
 
 .catalog__products-section {
 	max-width: 1700px;
+	margin: 0 auto;
+}
+
+.catalog__products {
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-template-rows: auto;
+	grid-auto-flow: row dense;
+}
+
+.catalog__product {
+	border: 1px solid $gray-5;
+	transition: 0.2s;
+	padding: 20px;
+	grid-column: span 3;
+
+	&--x2 {
+		grid-column: span 6;
+		background-color: #DFD7CA80;
+	}
+
+	&:hover {
+		box-shadow: inset 0 0 0 8px $gray-5;
+
+		.catalog__product-img {
+			transform: translateX(3px);
+		}
+	}
+
+	&:not(&--x2):nth-of-type(2n) {
+		background-color: #EFF1E680;
+	}
+
+	&:not(&--x2):nth-of-type(3n) {
+		background-color: #DFD6D980;
+	}
+
+	&:not(&--x2):nth-of-type(4n) {
+		background-color: #C7D7E480;
+	}
+}
+
+.catalog__product-category {
+	font-size: 16px;
+	line-height: 1.4;
+	color: $gray-1;
+}
+
+.catalog__product-title {
+	font-size: 24px;
+	font-family: $title-font;
+	color: $text-color;
+	line-height: 1.3;
+
+	&:hover	{
+		color: $gray-2;
+	}
+}
+
+.catalog__product-price {
+	font-size: 16px;
+	line-height: 1.4;
+	color: $text-color;
+}
+
+.catalog__product-img {
+	transition: 0.2s ease-out;
+}
+
+.catalog__product-slider {
+	margin-left: -12px;
+	margin-right: -12px;
+	margin-bottom: unset!important;
+
+	.slick-dots {
+		bottom: 100%;
+		right: 12px;
+		width: unset;
+
+		li {
+			margin: 0 3px;
+
+			button{
+				width: 18px;
+				height: 18px;
+				border-radius: 50%;
+				border: 1px solid $gray-1;
+				position: relative;
+				opacity: 0.25;
+
+				&:before {
+					content: "";
+					width: 9px;
+					height: 9px;
+					border-radius: 50%;
+					display: inline-block;
+					background-color: $gray-1;
+					opacity: 1;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			&.slick-active button {
+				opacity: .75;
+			}
+
+			&:not(.slick-active):hover button {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.catalog__product-img-wrap {
+	outline: none;
+}
+
+.catalog__product-img {
+	width: auto;
+	max-height: 290px;
+	object-fit: cover;
 	margin: 0 auto;
 }
