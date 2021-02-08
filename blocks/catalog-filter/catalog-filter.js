@@ -18,9 +18,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let filterHeight = $('.catalog-filter').height(),
 		filterTop = $('.layout__row.header').outerHeight(),
-		filterLeft = $('.layout__row:not(.header) .layout__l-side').outerWidth(),
-		filterRight = $('.layout__row:not(.header) .layout__r-side').outerWidth();
-	console.log(filterLeft)
+		filterLeft = $('.catalog__filter-wrap').offset().left,
+		filterWidth = $('.catalog__filter-wrap').width();
+	console.log(filterWidth + '   xxx')
+	$( window ).resize(function() {
+		filterHeight = $('.catalog-filter').height(),
+			filterTop = $('.layout__row.header').outerHeight(),
+			filterLeft = $('.catalog__filter-wrap').offset().left,
+			filterWidth = $('.catalog__filter-wrap').width();
+
+		$('.catalog-filter').css({
+			'top':filterTop,
+			'left':filterLeft,
+			'width':filterWidth
+		});
+	});
+
 
 	$('.catalog__filter-wrap').height(filterHeight);
 
@@ -36,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			$('.catalog-filter').css({
 				'top':filterTop,
 				'left':filterLeft,
-				'right':filterRight
+				'width':filterWidth
 			});
 		} else {
 			// если нет – удаляем класс
@@ -44,4 +57,5 @@ document.addEventListener('DOMContentLoaded', function () {
 			$('.catalog-filter').attr('style', '');
 		}
 	});
+
 });
