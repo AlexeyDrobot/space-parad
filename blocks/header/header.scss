@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока header, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/mixins.scss";
@@ -54,6 +54,11 @@
 
 		.layout__content {
 			flex-grow: unset;
+		}
+
+		.layout__l-side,
+		.layout__r-side {
+			max-width: unset;
 		}
 	}
 	.header__logo-wrap {

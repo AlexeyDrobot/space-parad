@@ -63,6 +63,10 @@
 	margin: 0 auto;
 }
 
+.catalog__filter-wrap {
+	position: relative;
+}
+
 .catalog__products {
 	display: grid;
 	grid-template-columns: repeat(12,1fr);
@@ -127,6 +131,7 @@
 
 .catalog__product-img {
 	transition: 0.4s!important;
+	will-change: transform;
 }
 
 .catalog__product-slider {

@@ -32,13 +32,13 @@
 	flex: 1;
 	flex-direction: column;
 	overflow: hidden;
-	border-right: 1px solid $gray-5;
 }
 
 .layout__r-side {
 	width: 80px;
 	min-width: 80px;
 	position: relative;
+	border-left: 1px solid $gray-5;
 
 	.lang-toggler {
 		position: fixed;
@@ -96,7 +96,6 @@
 
 	.layout__r-side {
 		background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent 40%, transparent);
-		border-left: 1px solid $gray-5;
 		z-index: 4;
 	}
 
@@ -124,12 +123,12 @@
 		width: 0;
 		border: none;
 		min-width: unset;
+		max-width: 0;
 	}
 	.layout__r-side {
 		width: 0;
 		min-width: unset;
-	}
-	.layout__content {
+		max-width: 0;
 		border: none;
 	}
 	.layout__to-top {

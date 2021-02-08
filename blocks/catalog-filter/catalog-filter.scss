@@ -4,7 +4,19 @@
 @import "../../assets/styles/mixins.scss";
 
 .catalog-filter {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-template-rows: auto;
+	grid-auto-flow: row dense;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	&.fixed {
+		position: fixed;
+	}
 
 	.catalog-filter__select {
 		width: 100%;
@@ -66,7 +78,7 @@
 }
 
 .catalog-filter__item {
-	width: 25%;
+	grid-column: span 3;
 
 	&:nth-of-type(even) .catalog-filter__select {
 		background-color: $gray-8;
