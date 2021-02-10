@@ -1,6 +1,7 @@
 // assets and script style addons
 @import "libs/jquery.fancybox.scss";
 @import "libs/slick.scss";
+@import "libs/nice-select.scss";
 
 // global styles
 @import "reset.scss";
@@ -10,10 +11,18 @@
 @import "fonts.scss";
 
 // BEM blocks
+@import "../../blocks/breadcrumb/breadcrumb.scss";
+@import "../../blocks/card-grid/card-grid.scss";
+@import "../../blocks/catalog/catalog.scss";
+@import "../../blocks/catalog-filter/catalog-filter.scss";
+@import "../../blocks/footer/footer.scss";
 @import "../../blocks/form/form.scss";
 @import "../../blocks/header/header.scss";
+@import "../../blocks/intro-slider/intro-slider.scss";
+@import "../../blocks/lang-toggler/lang-toggler.scss";
 @import "../../blocks/layout/layout.scss";
-
+@import "../../blocks/menu/menu.scss";
+@import "../../blocks/to-top/to-top.scss";
 
 // Временные диспетчеры блоков
 @import "style-starushchenko.scss";
