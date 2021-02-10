@@ -15,47 +15,45 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 
-
-	let filterHeight = $('.catalog-filter').height(),
-		filterTop = $('.layout__row.header').outerHeight(),
-		filterLeft = $('.catalog__filter-wrap').offset().left,
-		filterWidth = $('.catalog__filter-wrap').width();
-	console.log(filterWidth + '   xxx')
-	$( window ).resize(function() {
-		filterHeight = $('.catalog-filter').height(),
-			filterTop = $('.layout__row.header').outerHeight(),
-			filterLeft = $('.catalog__filter-wrap').offset().left,
-			filterWidth = $('.catalog__filter-wrap').width();
-
-		$('.catalog-filter').css({
-			'top':filterTop,
-			'left':filterLeft,
-			'width':filterWidth
-		});
-	});
-
-
-	$('.catalog__filter-wrap').height(filterHeight);
-
-	let itemTop = $('.catalog-filter').offset().top - filterTop;
-	$(window).scroll(function (event) {
-		// определяем позицию y относительно окна браузера
-		let windowTop = $(this).scrollTop();
-
+	function filterPosition() {
 		// если он является формой ниже
 		if (windowTop >= itemTop) {
 			// то присваиваем класс .fixed
 			$('.catalog-filter').addClass('fixed');
 			$('.catalog-filter').css({
-				'top':filterTop,
-				'left':filterLeft,
-				'width':filterWidth
+				'top': filterTop,
+				'left': filterLeft,
+				'width': filterWidth
 			});
 		} else {
 			// если нет – удаляем класс
 			$('.catalog-filter').removeClass('fixed');
 			$('.catalog-filter').attr('style', '');
 		}
+	}
+
+	let filterHeight = $('.catalog-filter').height(),
+		filterTop = $('.layout__row.header').outerHeight(),
+		filterLeft = $('.catalog__filter-wrap').offset().left,
+		filterWidth = $('.catalog__filter-wrap').width(),
+		windowTop = 0,
+		itemTop = $('.catalog-filter').offset().top - filterTop;
+
+	$('.catalog__filter-wrap').height(filterHeight);
+
+	$(window).scroll(function (event) {
+		windowTop = $(this).scrollTop();
+
+		filterPosition();
+	});
+
+	$(window).resize(function () {
+			filterHeight = $('.catalog-filter').height(),
+			filterTop = $('.layout__row.header').outerHeight(),
+			filterLeft = $('.catalog__filter-wrap').offset().left,
+			filterWidth = $('.catalog__filter-wrap').width();
+
+		filterPosition();
 	});
 
 });
