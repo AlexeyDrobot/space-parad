@@ -48,6 +48,12 @@
 	}
 }
 
+.layout__to-top {
+	position: fixed;
+	bottom: 20px;
+	left: 30px;
+}
+
 .layout--slider {
 	z-index: 3;
 
@@ -136,25 +142,23 @@
 		display: none;
 	}
 	.layout--slider {
-
-		.layout__l-side {
-			display: none;
-		}
-
-		.layout__r-side {
-			border: 0;
-		}
 		.header {
 			border-bottom: none;
 		}
 		.header__logo-wrap {
 			background: rgba(34, 34, 34, 0.9);
 			border: none;
-			display: flex;
+			display: flex !important;
 		}
 		.header__menu-btn-wrap {
 			background: rgba(34, 34, 34, 0.9);
 			border: none;
+		}
+		.layout__l-side {
+			display: none;
+		}
+		.layout__r-side {
+			border: 0;
 		}
 	}
 }

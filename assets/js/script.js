@@ -47,6 +47,14 @@ $(document).ready(function () {
 		})
 	});
 
+	// Кнопка Наверх
+	$('.to-top').on('click', function () {
+		$("html, body").animate({
+			scrollTop: 0
+		});
+		return false;
+	});
+
 	// Скрипт плавной прокрутки до якорей
 	/*$(function () {
 		$("a[href^='#']").click(function () {
