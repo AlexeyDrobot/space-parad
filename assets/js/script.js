@@ -28,6 +28,9 @@ $(document).ready(function () {
 	$('.intro-slider__body').slick({
 		centerMode: false,
 		slidesToShow: 1,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		pauseOnHover: false,
 		arrows: false,
 		dots: true
 	});

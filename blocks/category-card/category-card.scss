@@ -1,0 +1,47 @@
+// В этом файле должны быть стили для БЭМ-блока category-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.category-card {
+	background: $gray-6;
+	border: 1px solid $gray-6;
+	padding: 40px 30px;
+	min-height: 320px;
+	max-height: 320px;
+
+	&:hover {
+		background: $gray-8;
+		border: 1px solid $gray-4;
+
+		.category-card__image {
+			left: calc(50% + 15px);
+		}
+	}
+}
+
+.category-card__title {
+	display: block;
+	font-family: $title-font;
+	color: $text-color;
+	font-size: 32px;
+	margin-bottom: 12px;
+	font-weight: 400;
+}
+
+.category-card__title-add {
+	color: $text-color-alt;
+	font-family: $main-font;
+	font-size: 14px;
+}
+
+.category-card__image {
+	display: block;
+	position: absolute;
+	max-width: calc(100% - 80px);
+	max-height: 100%;
+	top: calc(50% + 35px);
+	left: calc(50% + 30px);
+	transform: translate(-50%, -50%);
+	transition: 0.6s;
+}
