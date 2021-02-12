@@ -1,0 +1,9 @@
+// В этом файле должны быть стили для БЭМ-блока card-grid, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.card-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
