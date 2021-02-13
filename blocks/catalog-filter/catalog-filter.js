@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 	if ($('.catalog-filter').length != 0) {
+
 		$('.catalog__filter-wrap').height($('.catalog-filter').height());
 
 		function filterPosition() {
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					// то присваиваем класс .fixed
 					filterItem.removeClass('hidden');
 					filterState = true;
-				} else if(windowTop <= parentTop + filterHeight) {
+				} else if (windowTop <= parentTop + filterHeight) {
 					filterItem.removeClass('hidden');
 					filterItem.removeClass('fixed');
 					filterItem.attr('style', '');

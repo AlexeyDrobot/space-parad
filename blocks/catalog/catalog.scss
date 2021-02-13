@@ -215,7 +215,6 @@
 }
 
 .catalog__popular-flex {
-	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
@@ -226,15 +225,14 @@
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-end;
-	width: 29%;
 	height: 490px;
 	background-color: $gray-8;
 	padding: 35px;
 	margin-bottom: 18px;
 
-	&:nth-of-type(3n + 2) {
+/*	&:nth-of-type(3n + 2) {
 		width: calc(42% - 36px);
-	}
+	}*/
 }
 
 .catalog__popular-item-title {

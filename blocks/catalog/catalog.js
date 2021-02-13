@@ -9,4 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesToScroll: 1,
 		arrows: false
 	});
+
+	$('.js-xxx').slick({
+		dots: true,
+		infinite: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+	});
 });
