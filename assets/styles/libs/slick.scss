@@ -153,6 +153,16 @@
 	background-size: 8px;
 }
 
+.slick-dots {
+	li {
+		margin: 0 3px;
+
+		&:only-child {
+			display: none;
+		}
+	}
+}
+
 
 @media (max-width: 1200px) {
 	.slick-arrow {

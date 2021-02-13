@@ -95,26 +95,27 @@
 				<div class="layout__content">
 					<!--DEV	Весь контент, включая контейнеры и футер здесь -->
 					<div class="catalog">
-						<section class="catalog_first-section">
-							<div class="catalog__breadcrumb-wrap">
-								@import "breadcrumb/breadcrumb.html"
+						<div class="catalog__section catalog_first-section">
+							<div class="catalog__container">
+								<div class="catalog__breadcrumb-wrap">
+									@import "breadcrumb/breadcrumb.html"
+								</div>
+								<p class="catalog__qoute">В любом интерьере, где есть натуральный камень, присутствует особая природная
+									сила,
+									по ощущение не сравнимая больше ни с чем. Поэтому к выбору мрамора или гранита надо подходить с
+									большим
+									вниманием. Витиеватый весь в прожилках камень кажется гладким, но стоит провести рукой - понимаешь что
+									глаза
+									обманулию Ощутить слегка шероховатую поверхность никак не ожидаешь.</p>
 							</div>
-							<p class="catalog__qoute">В любом интерьере, где есть натуральный камень, присутствует особая природная
-								сила,
-								по ощущение не сравнимая больше ни с чем. Поэтому к выбору мрамора или гранита надо подходить с большим
-								вниманием. Витиеватый весь в прожилках камень кажется гладким, но стоит провести рукой - понимаешь что
-								глаза
-								обманулию Ощутить слегка шероховатую поверхность никак не ожидаешь.</p>
-						</section>
-
-						<section class="catalog__second-section">
+						</div>
+						<div class="catalog__section catalog__second-section">
 							<div class="catalog__container">
 								<h1 class="catalog__title">Puzzle</h1>
 								<p class="catalog__text">Витиеватый весь в прожилках камень кажется гладким, но стоит провести рукой -
 									понимаешь что глаза обманули. Ощутить слегка шерохватую поверхность никак не ожидаешь.</p>
 							</div>
-						</section>
-
+						</div>
 						<section class="catalog__products-section catalog__filter-wrap">
 							<div class="catalog-filter">
 								<div class="catalog-filter__item">
@@ -378,44 +379,92 @@
 							</div>
 						</section>
 
-						<section class="catalog__products-section catalog__section-popular">
+						<section class="catalog__section catalog__section-popular">
 							<h2 class="catalog__title">Популярное</h2>
 							<p class="catalog__subtitle">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
 								roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-							<div class="catalog__popular-flex js-xxx">
-								<div class="catalog__popular-item">
-									<img src="img/product-img-popular.png" alt="Изображение товара" class="catalog__popular-item-img">
-									<p class="catalog__popular-item-title">Duble Cube</p>
-									<p class="catalog__popular-item-price">$ 111</p>
+							<div class="catalog__popular-slider">
+								<div class="catalog__popular-item-wrap">
+									<a href="javascript:void(0)" class="catalog__popular-item">
+										<img src="img/product-img-popular.png" alt="Изображение товара" class="catalog__popular-item-img">
+										<p class="catalog__popular-item-title">Duble Cube</p>
+										<p class="catalog__popular-item-price"></p>
+									</a>
 								</div>
-								<div class="catalog__popular-item">
-									<img src="img/product-img-popular.png" alt="Изображение товара" class="catalog__popular-item-img">
-									<p class="catalog__popular-item-title">Duble Cube</p>
-									<p class="catalog__popular-item-price">$ 5 555</p>
+
+								<div class="catalog__popular-item-wrap">
+									<a href="javascript:void(0)" class="catalog__popular-item">
+										<img src="img/product-img-popular.png" alt="Изображение товара" class="catalog__popular-item-img">
+										<p class="catalog__popular-item-title">Duble Cube</p>
+										<p class="catalog__popular-item-price">$ 111</p>
+									</a>
 								</div>
-								<div class="catalog__popular-item">
-									<img src="img/product-img-popular.png" alt="Изображение товара" class="catalog__popular-item-img">
-									<p class="catalog__popular-item-title">Duble Cube</p>
-									<p class="catalog__popular-item-price">$ 99</p>
+
+								<div class="catalog__popular-item-wrap">
+									<a href="javascript:void(0)" c class="catalog__popular-item">
+										<img src="img/product-img-popular.png" alt="Изображение товара" class="catalog__popular-item-img">
+										<p class="catalog__popular-item-title">Duble Cube</p>
+										<p class="catalog__popular-item-price">$ 111</p>
+									</a>
+								</div>
+
+								<div class="catalog__popular-item-wrap">
+									<a href="javascript:void(0)" class="catalog__popular-item">
+										<img src="img/product-img-popular.png" alt="Изображение товара" class="catalog__popular-item-img">
+										<p class="catalog__popular-item-title">Duble Cube</p>
+										<p class="catalog__popular-item-price">$ 111</p>
+									</a>
 								</div>
 							</div>
 						</section>
 
 						<section class="catalog__section-article">
-							<h2 class="catalog__title">Duble Cube</h2>
-							<p class="catalog__subtitle">Pellentesque accumsan convallis pretium</p>
+							<div class="catalog__section">
+								<h2 class="catalog__title">Duble Cube</h2>
+								<p class="catalog__subtitle">Pellentesque accumsan convallis pretium</p>
 
-							<p class="catalog__text">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi
-								nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. Aenean
-								condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue
-								sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla
-								convallis viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a.</p>
-
-							<div class="catalog__article-slider">
-
+								<p class="catalog__text">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum
+									porttitor imperdiet nisi
+									nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. Aenean
+									condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper
+									augue
+									sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla
+									convallis viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a.</p>
 							</div>
 
+							<div class="catalog__article-slider-wrap">
+								<div class="catalog__article-slider">
+									<div class="catalog__article-item">
+										<img src="img/article-slide.png" alt="" class="catalog__article-img">
+									</div>
+									<div class="catalog__article-item">
+										<img src="img/project2.png" alt="" class="catalog__article-img">
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="catalog__section">
+							<div class="catalog__container">
+								<h2 class="catalog__title">About us</h2>
+								<ul class="catalog__ul">
+									<li class="catalog__li">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend.</li>
+									<li class="catalog__li">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend.</li>
+									<li class="catalog__li">Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla convallis viverra</li>
+									<li class="catalog__li">Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla convallis viverra</li>
+								</ul>
+								<div class="catalog__about-text article">
+									<p>Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue sodales viverra.</p>
+									<p>Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla convallis viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a. Duis non neque non metus pharetra commodo id a lacus. Donec tristique mauris non dui dictum, quis vulputate sapien porta. Donec tristique nec leo ut eleifend. Nunc commodo, tellus a hendrerit sodales, est lorem consequat nunc, a mollis sem mi ullamcorper libero. Sed sed ante nunc.</p>
+								</div>
+								<ul class="catalog__ol">
+									<li class="catalog__li">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend.</li>
+									<li class="catalog__li">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend.</li>
+									<li class="catalog__li">Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla convallis viverra</li>
+									<li class="catalog__li">Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla convallis viverra</li>
+								</ul>
+							</div>
 						</section>
 
 					</div>
