@@ -15,31 +15,46 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 
-	function filterPosition() {
-		// если он является формой ниже
-		if (windowTop >= itemTop) {
-			// то присваиваем класс .fixed
-			$('.catalog-filter').addClass('fixed');
-			$('.catalog-filter').css({
-				'top': filterTop,
-				'left': filterLeft,
-				'width': filterWidth
-			});
-		} else {
-			// если нет – удаляем класс
-			$('.catalog-filter').removeClass('fixed');
-			$('.catalog-filter').attr('style', '');
-		}
-	}
 
-	let filterHeight = $('.catalog-filter').height(),
+	let  filterItem = $('.catalog-filter'),
+		filterHeight = filterItem.height(),
 		filterTop = $('.layout__row.header').outerHeight(),
 		filterLeft = $('.catalog__filter-wrap').offset().left,
 		filterWidth = $('.catalog__filter-wrap').width(),
 		windowTop = 0,
-		itemTop = $('.catalog-filter').offset().top - filterTop;
+		itemTop = filterItem.offset().top - filterTop + filterHeight,
+		catalogBottom = $('.catalog__products').offset().top + $('.catalog__products').height(),
+		filterState = false;
+	console.log(catalogBottom)
 
 	$('.catalog__filter-wrap').height(filterHeight);
+
+	function filterPosition() {
+
+		if (windowTop >= itemTop && !filterState && windowTop < catalogBottom - filterHeight ) {
+			// то присваиваем класс .fixed
+			filterItem.addClass('fixed');
+			filterItem.css({
+				'top': filterTop,
+				'left': filterLeft,
+				'width': filterWidth
+			});
+			filterState = true;
+
+			console.log('if true' + filterState)
+		} else if (windowTop >= itemTop && filterState && windowTop > catalogBottom - filterHeight) {
+			// если нет – удаляем класс
+			filterItem.removeClass('fixed');
+			filterItem.attr('style', '');
+			filterState = false;
+			console.log('else')
+		} else if( windowTop < itemTop) {
+			// если нет – удаляем класс
+			filterItem.removeClass('fixed');
+			filterItem.attr('style', '');
+			filterState = false;
+		}
+	}
 
 	$(window).scroll(function (event) {
 		windowTop = $(this).scrollTop();
@@ -48,11 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	$(window).resize(function () {
-			filterHeight = $('.catalog-filter').height(),
-			filterTop = $('.layout__row.header').outerHeight(),
-			filterLeft = $('.catalog__filter-wrap').offset().left,
-			filterWidth = $('.catalog__filter-wrap').width();
-
 		filterPosition();
 	});
 
