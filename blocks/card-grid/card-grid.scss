@@ -4,6 +4,75 @@
 @import "../../assets/styles/mixins.scss";
 
 .card-grid {
+	@include container;
 	display: flex;
 	flex-wrap: wrap;
+	padding: 0 12px;
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+.card-grid__item {
+	width: calc(25% - 16px);
+	margin: 0 8px 16px;
+	position: relative;
+
+	background: $gray-8;
+	padding: 50px 50px 60px;
+	display: flex;
+	flex-direction: column;
+
+	&--wide {
+		width: calc(50% - 16px);
+	}
+}
+
+.card-grid__item-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 45px;
+
+	svg {
+		margin-right: 25px;
+	}
+}
+
+.card-grid__item-header-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-grid__item-title {
+	font-family: $title-font;
+	font-size: 32px;
+	color: $text-color;
+
+	&:hover, &:focus {
+		color: $gray-1;
+	}
+}
+
+.card-grid__item-desc {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: $gray-2;
+}
+
+.card-grid__item-content {
+	font-size: 18px;
+	line-height: 1.5;
+	max-width: 550px;
+	flex-grow: 1;
+}
+
+.card-grid__item-link {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: $gray-2;
+	border-bottom: 1px solid;
+	align-self: flex-start;
+
+	&:hover, &:focus {
+		color: $text-color;
+	}
 }
