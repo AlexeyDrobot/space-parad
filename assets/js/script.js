@@ -24,7 +24,7 @@ $(document).ready(function () {
 		});
 	});
 
-	// Слайдер на главной странице
+	// Интро-слайдер полноэкранный
 	$('.intro-slider__body').slick({
 		centerMode: false,
 		slidesToShow: 1,
@@ -33,6 +33,38 @@ $(document).ready(function () {
 		pauseOnHover: false,
 		arrows: false,
 		dots: true
+	});
+
+	// Слайдер Projects
+	$('.projects-slider').slick({
+		centerMode: false,
+		slidesToShow: 3.5,
+		// variableWidth: true,
+		infinite: false,
+		draggable: false,
+		swipe: false,
+		responsive: [
+			{
+				breakpoint: 1920,
+				settings: {
+					slidesToShow: 2.5,
+				}
+			},
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 1.5,
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 1.5,
+					draggable: true,
+					swipe: true,
+				}
+			}
+		]
 	});
 
 	// Кнопка переключения языка

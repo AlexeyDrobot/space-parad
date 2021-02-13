@@ -45,3 +45,48 @@
 	color: $text-color-alt;
 	margin-bottom: 5px;
 }
+
+@media (max-width: 1439px) {
+	.product-card {
+		padding: 20px;
+		min-height: 250px;
+
+		&__img {
+			max-height: 170px;
+		}
+
+		&__img-wrap {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.product-card {
+		padding: 10px;
+
+		&__img {
+			max-height: 140px;
+		}
+
+		&__img-wrap {
+			margin-bottom: 10px;
+			flex-grow: 0;
+		}
+
+		&__category {
+			font-size: 12px;
+			margin-bottom: 15px;
+		}
+
+		&__title {
+			font-size: 14px;
+			font-family: $title-font;
+			flex-grow: 1;
+		}
+
+		&__price {
+			font-size: 12px;
+		}
+	}
+}
