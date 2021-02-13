@@ -15,55 +15,65 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 
+	if ($('.catalog-filter').length != 0) {
+		$('.catalog__filter-wrap').height($('.catalog-filter').height());
 
-	let  filterItem = $('.catalog-filter'),
-		filterHeight = filterItem.height(),
-		filterTop = $('.layout__row.header').outerHeight(),
-		filterLeft = $('.catalog__filter-wrap').offset().left,
-		filterWidth = $('.catalog__filter-wrap').width(),
-		windowTop = 0,
-		itemTop = filterItem.offset().top - filterTop + filterHeight,
-		catalogBottom = $('.catalog__products').offset().top + $('.catalog__products').height(),
-		filterState = false;
-	console.log(catalogBottom)
+		function filterPosition() {
 
-	$('.catalog__filter-wrap').height(filterHeight);
+			let filterItem = $('.catalog-filter'),
+				filterHeight = filterItem.height(),
+				filterTop = $('.layout__row.header').outerHeight(),
+				filterLeft = $('.catalog__filter-wrap').offset().left,
+				filterWidth = $('.catalog__filter-wrap').width(),
+				windowTop = $(window).scrollTop(),
+				parentTop = $('.catalog__filter-wrap').offset().top - filterTop,
+				catalogBottom = $('.catalog__products').offset().top + $('.catalog__products').height() - filterHeight;
 
-	function filterPosition() {
 
-		if (windowTop >= itemTop && !filterState && windowTop < catalogBottom - filterHeight ) {
-			// то присваиваем класс .fixed
-			filterItem.addClass('fixed');
-			filterItem.css({
-				'top': filterTop,
-				'left': filterLeft,
-				'width': filterWidth
-			});
-			filterState = true;
+			if (windowTop > parentTop && !filterState && windowTop < catalogBottom - filterHeight) {
+				filterItem.addClass('hidden');
+				filterItem.addClass('fixed');
+				filterItem.css({
+					'top': filterTop,
+					'left': filterLeft,
+					'width': filterWidth
+				});
 
-			console.log('if true' + filterState)
-		} else if (windowTop >= itemTop && filterState && windowTop > catalogBottom - filterHeight) {
-			// если нет – удаляем класс
-			filterItem.removeClass('fixed');
-			filterItem.attr('style', '');
-			filterState = false;
-			console.log('else')
-		} else if( windowTop < itemTop) {
-			// если нет – удаляем класс
-			filterItem.removeClass('fixed');
-			filterItem.attr('style', '');
-			filterState = false;
+				$('.js-filter-item').removeClass('open')
+
+				if (windowTop >= parentTop + 300) {
+					// то присваиваем класс .fixed
+					filterItem.removeClass('hidden');
+					filterState = true;
+				} else if(windowTop <= parentTop + filterHeight) {
+					filterItem.removeClass('hidden');
+					filterItem.removeClass('fixed');
+					filterItem.attr('style', '');
+				}
+
+			} else if (windowTop >= parentTop && filterState && windowTop > catalogBottom - filterHeight) {
+				filterItem.addClass('hidden');
+				filterState = false;
+			} else if (windowTop < parentTop && filterState) {
+				// если нет – удаляем класс
+				filterItem.removeClass('fixed');
+				filterItem.attr('style', '');
+				filterItem.removeClass('hidden');
+				filterState = false;
+			}
 		}
+
+
+		let filterState = false;
+
+		$(window).scroll(function (event) {
+			filterPosition();
+		});
+
+		$(window).resize(function () {
+			filterState = false;
+			filterPosition();
+		});
 	}
-
-	$(window).scroll(function (event) {
-		windowTop = $(this).scrollTop();
-
-		filterPosition();
-	});
-
-	$(window).resize(function () {
-		filterPosition();
-	});
 
 });

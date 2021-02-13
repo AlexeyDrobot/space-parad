@@ -26,6 +26,9 @@
 	width: 140px;
 	min-width: 140px;
 	border-right: 1px solid $gray-5;
+	z-index: 2;
+	background-color: #fff;
+	position: relative;
 }
 
 .layout__content {

@@ -16,6 +16,11 @@
 
 	&.fixed {
 		position: fixed;
+		transition: .25s;
+	}
+
+	&.hidden {
+		transform: translateY(-250px);
 	}
 
 	.catalog-filter__select {
