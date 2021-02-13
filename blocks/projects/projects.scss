@@ -5,9 +5,10 @@
 
 .projects {
 	background: $accent-olive url("../img/line-bg-pattern-gray.png") repeat;
+	background-position: center;
 	color: $light;
 	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 }
 
 .projects__header {
@@ -58,32 +59,96 @@
 	max-width: 715px;
 	font-size: 16px;
 	color: $gray-5;
+	line-height: 1.5;
 }
 
-.projects-slider__slide {
-	padding-right: 20px;
-
-	&:not(.slick-active) {
-		opacity: 0.2;
-
-		.projects-slider__slide-caption {
-			visibility: hidden;
-			opacity: 0;
-		}
+@media (max-width: 1679px) {
+	.projects {
+		background-size: 350px 10px;
+	}
+	.projects__title {
+		margin-right: 80px;
+	}
+	.projects__section-title {
+		max-width: 655px;
 	}
 }
 
-.projects-slider__slide-image {
-	display: block;
-	width: 100%;
-	height: 395px;
-	object-fit: cover;
-	margin-bottom: 25px;
+@media (max-width: 1439px) {
+	.projects {
+		padding-bottom: 100px;
+	}
+	.projects__section-title {
+		max-width: 545px;
+	}
+	.projects__title {
+		margin-right: 60px;
+		font-size: 36px;
+	}
 }
 
-.projects-slider__slide-caption {
-	color: $gray-5;
-	font-size: 18px;
-	font-weight: 300;
-	transition: 0.3s;
+@media (max-width: 1199px) {
+	.projects {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	.projects__header {
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
+	.projects__title {
+		margin-left: 0;
+		margin-bottom: 26px;
+	}
+	.projects__section-title {
+		max-width: 100%;
+	}
+	.projects__slider {
+		margin-bottom: 70px;
+	}
+}
+
+@media (max-width: 991px) {
+	.projects__bottom-title {
+		font-size: 30px;
+		line-height: 1.3;
+		margin-bottom: 30px;
+		max-width: 500px;
+	}
+}
+
+@media (max-width: 768px) {
+	.projects {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background-size: 176px 10px;
+	}
+	.projects__title {
+		font-size: 24px;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.projects__section-title {
+		font-size: 14px;
+	}
+	.projects__header {
+		margin-bottom: 40px;
+	}
+	.projects__slider {
+		margin-bottom: 50px;
+	}
+	.projects__bottom-title {
+		font-size: 24px;
+		font-weight: 900;
+		font-family: $title-font;
+	}
+	.projects__bottom-content {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 370px) {
+	.projects {
+		background-size: 170px 10px;
+	}
 }

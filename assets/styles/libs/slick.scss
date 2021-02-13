@@ -123,10 +123,10 @@
 
 .slick-arrow {
 	background: $gray-8 url(../img/arrow-left-gray.svg) center / contain no-repeat;
-	background-size: 12px 18px !important;
+	background-size: 50% 50% !important;
 	z-index: 2;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	transform: translateY(-50%);
 	border: none;
 	font-size: 0;
@@ -164,23 +164,15 @@
 	background: $gray-5 url(../img/arrow-left-gray.svg) center no-repeat;
 }
 
-
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
 	.slick-arrow {
-		background: #fff url(../img/arrow-left-gray.svg) center no-repeat;
-		opacity: 0.5;
-
-		&:hover {
-			opacity: 1;
-			background: #fff url(../img/arrow-left-gray.svg) center no-repeat;
-		}
+		width: 30px;
+		height: 30px;
 	}
 	.slick-next {
-		left: unset;
-		right: 0;
+		right: 15px;
 	}
 	.slick-prev {
-		right: unset;
-		left: 0;
+		left: 15px;
 	}
 }

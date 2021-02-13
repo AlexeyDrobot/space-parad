@@ -51,15 +51,17 @@ $(document).ready(function () {
 				}
 			},
 			{
-				breakpoint: 1200,
+				breakpoint: 1199,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1.5,
 				}
 			},
 			{
 				breakpoint: 991,
 				settings: {
 					slidesToShow: 1.5,
+					draggable: true,
+					swipe: true,
 				}
 			}
 		]
