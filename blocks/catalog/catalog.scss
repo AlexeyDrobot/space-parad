@@ -151,6 +151,13 @@
 
 		li {
 			margin: 0 3px;
+			width: unset;
+			height: unset;
+			background: 0;
+
+			&:after {
+				display: none;
+			}
 
 			button {
 				width: 18px;
@@ -162,6 +169,8 @@
 				font-size: 0;
 				cursor: pointer;
 				outline: none;
+				display: block;
+				transition: 0.3s;
 
 				&:before {
 					content: "";
