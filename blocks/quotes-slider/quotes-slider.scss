@@ -45,3 +45,38 @@
 		}
 	}
 }
+
+@media (max-width: 1199px) {
+	.quotes-slider {
+		@include container;
+		margin-bottom: 100px;
+	}
+}
+
+@media (max-width: 991px) {
+	.quotes-slider {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.quotes-slider {
+		margin-bottom: 80px;
+	}
+	.quotes-slider__item-title {
+		font-size: 24px;
+		font-weight: 900;
+		margin-bottom: 5px;
+	}
+	.quotes-slider__item-desc {
+		font-size: 14px;
+		max-width: 260px;
+		line-height: 1.4;
+		color: $text-color;
+		margin-bottom: 20px;
+	}
+	.quotes-slider__item-content {
+		font-size: 14px;
+		color: $text-color;
+	}
+}
