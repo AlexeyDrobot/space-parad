@@ -67,6 +67,46 @@ $(document).ready(function () {
 		]
 	});
 
+	// Слайдер превью-новостей
+	$('.news-slider__stage').slick({
+		centerMode: false,
+		slidesToShow: 4,
+		infinite: true,
+		draggable: true,
+		swipe: true,
+		responsive: [
+			{
+				breakpoint: 1920,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 1439,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
+
+	// Слайдер с линейными dots
+	$('.quotes-slider').slick({
+		centerMode: false,
+		slidesToShow: 1,
+		infinite: true,
+		draggable: true,
+		swipe: true,
+		arrows: false,
+		dots: true,
+	});
+
 	// Кнопка переключения языка
 	$('.js_lang-toggler').on('click', function () {
 		$(this).find('.lang-toggler__variants').slideToggle(300)
@@ -89,6 +129,33 @@ $(document).ready(function () {
 		});
 		return false;
 	});
+
+	// Кнопка Play для видео
+	$('.js_play-video').each(function () {
+		var video = $(this).parents('.video').find('video');
+		var playButton =  $(this);
+
+		if (video.length > 0) {
+			video.on('click', function () {
+				if (!video[0].paused) {
+					video.trigger('pause');
+					video[0].controls = false;
+					playButton.fadeIn(300);
+				} else {
+					video.trigger('play');
+					video[0].controls = true;
+				}
+			});
+
+			playButton.on('click', function () {
+				if (video[0].paused) {
+					video.trigger('play');
+					video[0].controls = true;
+					playButton.fadeOut(300);
+				}
+			});
+		}
+	})
 
 	// Скрипт плавной прокрутки до якорей
 	/*$(function () {
