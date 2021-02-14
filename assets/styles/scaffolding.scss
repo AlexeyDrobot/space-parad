@@ -89,3 +89,7 @@ textarea {
 .container {
 	@include container;
 }
+
+.section-gray {
+	background: $gray-8;
+}

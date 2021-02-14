@@ -56,6 +56,16 @@ gulp.task("copyImages", function () {
 	}));
 });
 
+// copies videos into build
+gulp.task("copyVideo", function () {
+	return gulp.src([
+		"assets/video/**/*.{mp4,wav,mpeg,avi}"
+	])
+	.pipe(copy('build', {
+		prefix: 1
+	}));
+});
+
 
 // copies images for bem-blocks into build
 gulp.task("copybemimages", function () {
@@ -305,9 +315,9 @@ gulp.task("criticalCSS", function () {
 
 
 //start
-gulp.task("serve", gulp.series("clean", "concat", "htmlimport", "htmlbeautify", "copyAssets", "copybemimages", "jsmin", "style", "watch" /*, "images", "svgimages"*/));
+gulp.task("serve", gulp.series("clean", "concat", "htmlimport", "htmlbeautify", "copyAssets", "copyVideo", "copybemimages", "jsmin", "style", "watch" /*, "images", "svgimages"*/));
 
 
 // build
-gulp.task("build", gulp.series("clean", "htmlimport", "htmlbeautify", "copyAssets", "copybemimages", "concat", "jsmin", "style-prod", "images", "svgimages"));
+gulp.task("build", gulp.series("clean", "htmlimport", "htmlbeautify", "copyAssets", "copyVideo", "copybemimages", "concat", "jsmin", "style-prod", "images", "svgimages"));
 

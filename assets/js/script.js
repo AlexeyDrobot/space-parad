@@ -90,6 +90,33 @@ $(document).ready(function () {
 		return false;
 	});
 
+	// Кнопка Play для видео
+	$('.js_play-video').each(function () {
+		var video = $(this).parents('.video').find('video');
+		var playButton =  $(this);
+
+		if (video.length > 0) {
+			video.on('click', function () {
+				if (!video[0].paused) {
+					video.trigger('pause');
+					video[0].controls = false;
+					playButton.fadeIn(300);
+				} else {
+					video.trigger('play');
+					video[0].controls = true;
+				}
+			});
+
+			playButton.on('click', function () {
+				if (video[0].paused) {
+					video.trigger('play');
+					video[0].controls = true;
+					playButton.fadeOut(300);
+				}
+			});
+		}
+	})
+
 	// Скрипт плавной прокрутки до якорей
 	/*$(function () {
 		$("a[href^='#']").click(function () {
