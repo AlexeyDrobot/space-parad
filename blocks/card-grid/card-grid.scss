@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока card-grid, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока card-grid, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/mixins.scss";
@@ -24,6 +24,18 @@
 
 	&--wide {
 		width: calc(50% - 16px);
+	}
+
+	&--xxl {
+		width: 100%;
+	}
+
+	&--m {
+		width: calc(66% - 16px);
+	}
+
+	&--s {
+		width: calc(34% - 16px);
 	}
 }
 

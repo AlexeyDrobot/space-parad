@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока category-card, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока category-card, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/mixins.scss";
@@ -44,6 +44,7 @@
 	left: calc(50% + 30px);
 	transform: translate(-50%, -50%);
 	transition: 0.6s;
+	z-index: 1;
 }
 
 @media (max-width: 1439px) {

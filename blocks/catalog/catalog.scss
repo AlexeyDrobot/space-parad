@@ -353,6 +353,7 @@
 	.slick-prev {
 		right: calc(100% + 100px);
 		transform: translateY(-50%);
+		left: unset;
 	}
 
 	.slick-next {
@@ -418,4 +419,26 @@
 
 .catalog__about-text {
 	margin-bottom: 50px;
+}
+
+.catalog__tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 850px;
+	margin: 25px auto 105px;
+}
+
+.catalog__tag {
+	text-decoration: underline;
+	color: $gray-3;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	font-size: 12px;
+
+	&:hover {
+		color: $text-color;
+	}
 }
