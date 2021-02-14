@@ -1,3 +1,13 @@
+## Тестирование вёрстки:
+
+- [Главная страница](https://starushchenko.github.io/encor.by/index.html)
+- [Каталог](https://starushchenko.github.io/encor.by/catalog.html)
+- [Категории](https://starushchenko.github.io/encor.by/category-products.html)
+- [Страница товара](https://starushchenko.github.io/encor.by/product.html)
+- [Список новостей](https://starushchenko.github.io/encor.by/news.html)
+- [Новость детально](https://starushchenko.github.io/encor.by/news-detail.html)
+
+
 # Gulp-Sass-BEM Starter Template
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
