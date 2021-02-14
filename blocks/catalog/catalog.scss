@@ -154,6 +154,7 @@
 			width: unset;
 			height: unset;
 			background: 0;
+			padding: 2px 0;
 
 			&:after {
 				display: none;
@@ -187,8 +188,13 @@
 				}
 			}
 
-			&.slick-active button {
-				opacity: .75;
+			&.slick-active {
+				cursor: auto;
+
+				button {
+					opacity: .75;
+					cursor: auto;
+				}
 			}
 
 			&:not(.slick-active):hover button {
