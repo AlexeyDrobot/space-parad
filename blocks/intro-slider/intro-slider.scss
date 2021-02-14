@@ -26,6 +26,10 @@
 			margin: 0 24px 0 0;
 			cursor: pointer;
 
+			&:after {
+				display: none;
+			}
+
 			button {
 				display: none;
 			}
@@ -105,7 +109,7 @@
 	.intro-slider {
 
 		.slick-dots {
-			bottom: 20px;
+			bottom: 60px;
 			right: 10px;
 			width: auto;
 
@@ -136,7 +140,7 @@
 		height: calc(100vh - 66px);
 	}
 	.intro-slider__item-info {
-		padding: 0 80px 20px 20px;
+		padding: 0 80px 60px 20px;
 	}
 	.intro-slider__item-title {
 		font-size: 32px;

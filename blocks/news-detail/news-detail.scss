@@ -1,0 +1,91 @@
+// В этом файле должны быть стили для БЭМ-блока news-detail, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.news-detail {
+
+	.news-preview {
+		margin-bottom: 150px;
+	}
+	.news-preview__title {
+		font-weight: 400;
+		font-size: 60px;
+		margin-bottom: 25px;
+	}
+	.news-preview__image {
+		max-width: 650px;
+		max-height: 510px;
+	}
+	.news-preview__info {
+		width: calc(100% - 300px);
+		padding: 44px 480px 45px 220px;
+		justify-content: center;
+	}
+	.news-preview__content {
+		flex-grow: 0;
+	}
+}
+
+.news-detail__cover {
+	position: relative;
+	margin-bottom: 100px;
+}
+
+.news-detail__cover-logo {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+}
+
+.news-detail__cover-image {
+	width: 100%;
+	object-fit: cover;
+}
+
+.news-detail__text-block {
+	@include container;
+	max-width: 1080px;
+	margin: 0 auto 80px;
+
+	h1, h2, h3 {
+		font-size: 40px;
+		font-family: $title-font;
+		font-weight: 400;
+		margin-bottom: 35px;
+		max-width: 800px;
+	}
+
+	p, li {
+		font-size: 18px;
+		color: $text-color;
+		max-width: 800px;
+	}
+
+	&--has-img {
+		display: flex;
+		max-width: 1200px;
+		align-items: center;
+	}
+}
+
+.news-detail__side-image {
+	margin-right: 100px;
+	max-width: 40%;
+}
+
+.news-detail__side-text {
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+.news-detail__full-image {
+	@include container;
+	margin-bottom: 50px;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
