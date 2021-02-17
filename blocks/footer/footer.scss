@@ -4,9 +4,9 @@
 @import "../../assets/styles/mixins.scss";
 
 .footer {
+	@include container;
 	background-color: $gray-8;
-	padding-top: 96px;
-	padding-bottom: 50px;
+	padding: 96px 40px 50px;
 
 	@media (max-width: 991px) {
 		padding-top: unset;
@@ -15,10 +15,6 @@
 }
 
 .footer__container {
-	max-width: 1600px;
-	margin: 0 auto;
-	padding-left: 25px;
-	padding-right: 25px;
 	display: flex;
 	flex-direction: column;
 }
@@ -78,8 +74,6 @@
 
 .footer__divider {
 	border-bottom: 1px solid $gray-4;
-	margin-left: -25px;
-	margin-right: -25px;
 
 	@media (max-width: 991px) {
 		order: 1;
@@ -91,7 +85,6 @@
 .footer__divider-text {
 	text-align: right;
 	margin-bottom: 10px;
-	margin-right: 25px;
 
 	span:first-of-type {
 		color: $gray-3;
