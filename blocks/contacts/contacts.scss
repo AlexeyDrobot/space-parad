@@ -1,0 +1,84 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.contacts {
+ @include container;
+}
+
+.contacts__breadcrumb {
+	margin-top: 65px;
+}
+
+.contacts__container {
+	max-width: 1570px;
+	margin: 0 auto;
+}
+
+.contacts__flex {
+	display: flex;
+	margin-top: 40px;
+	margin-bottom: 120px;
+}
+
+.contacts__map-box {
+	margin-right: 70px;
+	flex-grow: 1;
+}
+
+.contacts__map {
+	width: 100%;
+	max-width: 1085px;
+	min-height: 550px;
+}
+
+.contacts__form-box {
+	max-width: 415px;
+	width: 100%;
+}
+
+.contacts__info {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 50px;
+}
+
+.contacts__info-box {
+	width: 100%;
+	max-width: 300px;
+
+	&:last-of-type {
+		margin-left: 100px;
+	}
+}
+
+.contacts__info-title {
+	font-size: 24px;
+	line-height: 1.4;
+	margin-bottom: 20px;
+	font-family: $title-font;
+	text-transform: uppercase;
+}
+
+.contacts__info-link,
+.contacts__info-address,
+.contacts__info-link-wrap span {
+	font-size: 18px;
+	line-height: 2;
+	color: $gray-3;
+}
+
+.contacts__form-title {
+	font-size: 40px;
+	line-height: 1.25;
+	font-family: $title-font;
+	margin-bottom: 20px;
+}
+
+.contacts__form-text {
+	font-size: 14px;
+	line-height: 1.4;
+	color: $gray;
+	margin-bottom: 25px;
+}

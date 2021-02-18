@@ -38,4 +38,13 @@
 		$(this).prev().find('span').html('Прикрепить файл');
 		$(this).removeClass('form__fileinput-close--active');
 	})
+
+	$('.form__group input').focus(function(){
+		$(this).siblings('label').css('transform', 'translateY(calc(-50% - 23px))');
+	});
+	$('.form__group input').focusout(function(){
+		if( !$(this).val() ) {
+			$(this).siblings('label').attr('style','');
+		}
+	});
 })(jQuery, window, document);
