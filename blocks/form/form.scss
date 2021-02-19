@@ -8,7 +8,7 @@
 	input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], select, textarea {
 		padding: 12px 0;
 		border: unset;
-		border-bottom: 2px solid $gray-6;
+		border-bottom: 1px solid $gray-6;
 		font-family: 'Roboto', sans-serif;
 		font-size: 14px;
 		color: $gray;
@@ -24,7 +24,7 @@
 		}
 
 		&:focus {
-			border-bottom: 2px solid $gray-4;
+			border-bottom: 1px solid $gray-4;
 			outline: none;
 		}
 	}
@@ -38,8 +38,8 @@
 		line-height: 1.4;
 		color: $gray-3;
 		font-weight: 400;
-		animation-timing-function: ease-in-out;
-		transition: 0.1s;
+		animation-timing-function: ease-in;
+		transition: 0.25s;
 	}
 
 	textarea {

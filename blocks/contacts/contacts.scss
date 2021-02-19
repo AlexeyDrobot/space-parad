@@ -20,28 +20,71 @@
 	display: flex;
 	margin-top: 40px;
 	margin-bottom: 120px;
+
+	@media (max-width: 1440px) {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	@media (max-width: 768px) {
+		margin-bottom: 60px;
+	}
 }
 
 .contacts__map-box {
-	margin-right: 70px;
+	margin-right: 60px;
 	flex-grow: 1;
+
+	@media (max-width: 1440px) {
+		margin-top: 50px;
+		align-self: stretch;
+		margin-right: -20px;
+		margin-left: -20px;
+	}
 }
 
 .contacts__map {
 	width: 100%;
 	max-width: 1085px;
 	min-height: 550px;
+
+	@media (max-width: 1440px) {
+		max-width: 100%;
+	}
 }
 
 .contacts__form-box {
-	max-width: 415px;
+	max-width: 435px;
 	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	@media (max-width: 1440px) {
+		max-width: 635px;
+		margin-bottom: 25px;
+	}
+
+	@media (max-width: 768px) {
+		margin-bottom: 15px;
+	}
 }
 
 .contacts__info {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 50px;
+
+	@media (max-width: 1440px) {
+		justify-content: center;
+		padding: 0 50px;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+	@media (max-width: 425px) {
+		padding: 0 30px;
+	}
 }
 
 .contacts__info-box {
@@ -50,6 +93,25 @@
 
 	&:last-of-type {
 		margin-left: 100px;
+
+		@media (max-width: 768px) {
+			margin-left: unset;
+			padding-top: 40px;
+			margin-top: 40px;
+			border-top: 1px solid $gray-5;
+		}
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+		max-width: unset;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media (max-width: 425px) {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
@@ -59,6 +121,15 @@
 	margin-bottom: 20px;
 	font-family: $title-font;
 	text-transform: uppercase;
+
+
+	@media (max-width: 991px) {
+		font-size: 20px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
 }
 
 .contacts__info-link,
@@ -67,6 +138,11 @@
 	font-size: 18px;
 	line-height: 2;
 	color: $gray-3;
+
+	@media (max-width: 768px) {
+		font-size: 16px;
+		line-height: 1.4;
+	}
 }
 
 .contacts__form-title {
@@ -74,6 +150,15 @@
 	line-height: 1.25;
 	font-family: $title-font;
 	margin-bottom: 20px;
+
+	@media (max-width: 991px) {
+		font-size: 30px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
 }
 
 .contacts__form-text {
@@ -81,4 +166,16 @@
 	line-height: 1.4;
 	color: $gray;
 	margin-bottom: 25px;
+}
+
+.contacts__form-button {
+	display: block;
+	margin-top: 50px;
+	margin-left: auto;
+	width: 100%;
+	max-width: 225px;
+
+	@media (max-width: 1440px) {
+		max-width: 100%;
+	}
 }
