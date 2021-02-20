@@ -9,6 +9,15 @@
 
 .contacts__breadcrumb {
 	margin-top: 65px;
+
+	@media (max-width: 768px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	@media (max-width: 425px) {
+		margin-top: 25px;
+	}
 }
 
 .contacts__container {
@@ -28,6 +37,10 @@
 
 	@media (max-width: 768px) {
 		margin-bottom: 60px;
+	}
+
+	@media (max-width: 425px) {
+		margin-top: 25px;
 	}
 }
 
@@ -50,6 +63,14 @@
 
 	@media (max-width: 1440px) {
 		max-width: 100%;
+	}
+
+	@media (max-width: 767px) {
+		min-height: 400px;
+	}
+
+	@media (max-width: 424px) {
+		min-height: 200px;
 	}
 }
 
@@ -129,6 +150,7 @@
 
 	@media (max-width: 768px) {
 		font-size: 18px;
+		text-transform: unset;
 	}
 }
 

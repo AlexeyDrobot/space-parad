@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока product-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.product-slider {
+	padding-left: 80px;
+	padding-right: 80px;
+	margin-bottom: 80px;
+
+	.slick-next {
+		right: 0;
+	}
+
+	.slick-prev {
+		left: 0;
+	}
+}
+
+.product-slider__item-wrap {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.product-slider__item {
+	display: block;
+	width: 470px;
+	height: 360px;
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: $gray-8;
+	padding: 30px;
+	outline: none;
+}
+
+.product-slider__img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: 0.4s !important;
+
+	@at-root .product-slider__item:hover #{&} {
+		transform: translateX(10px);
+	}
+}
