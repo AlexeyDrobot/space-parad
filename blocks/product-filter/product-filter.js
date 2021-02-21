@@ -18,9 +18,63 @@ document.addEventListener('DOMContentLoaded', function () {
 							swipe: true,
 							responsive: [
 								{
-									breakpoint: 769,
+									breakpoint: 1440,
 									settings: {
-										slidesToShow: 1,
+										slidesToShow: 5,
+									}
+								},
+								{
+									breakpoint: 1300,
+									settings: {
+										slidesToShow: 4,
+									}
+								},
+								{
+									breakpoint: 992,
+									settings: {
+										slidesToShow: 10,
+									}
+								},
+								{
+									breakpoint: 900,
+									settings: {
+										slidesToShow: 10,
+									}
+								},
+								{
+									breakpoint: 850,
+									settings: {
+										slidesToShow: 8,
+									}
+								},
+								{
+									breakpoint: 775,
+									settings: {
+										slidesToShow: 7,
+									}
+								},
+								{
+									breakpoint: 700,
+									settings: {
+										slidesToShow: 6,
+									}
+								},
+								{
+									breakpoint: 625,
+									settings: {
+										slidesToShow: 5,
+									}
+								},
+								{
+									breakpoint: 550,
+									settings: {
+										slidesToShow: 4,
+									}
+								},
+								{
+									breakpoint: 420,
+									settings: {
+										slidesToShow: 3,
 									}
 								}
 							]
