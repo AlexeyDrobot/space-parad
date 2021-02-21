@@ -7,6 +7,7 @@
 - [Страница About](https://starushchenko.github.io/encor.by/about.html)
 - [Список новостей](https://starushchenko.github.io/encor.by/news.html)
 - [Новость детально](https://starushchenko.github.io/encor.by/news-detail.html)
+- [Контакты](https://starushchenko.github.io/encor.by/contacts.html)
 
 
 # Gulp-Sass-BEM Starter Template
