@@ -5,7 +5,7 @@
 
 .catalog-filter {
 	display: grid;
-	grid-template-columns: repeat(12,1fr);
+	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	grid-auto-flow: row dense;
 	position: absolute;
@@ -13,6 +13,7 @@
 	left: 0;
 	right: 0;
 	z-index: 1;
+
 
 	&.fixed {
 		position: fixed;
@@ -22,6 +23,12 @@
 	&.hidden {
 		transform: translateY(-250px);
 	}
+
+	&.mob-active {
+		top: 0 !important;
+		z-index: 5;
+	}
+
 
 	.catalog-filter__select {
 		width: 100%;
@@ -69,8 +76,7 @@
 
 			&.focus,
 			&.selected.focus,
-			&:hover
-			{
+			&:hover {
 				background: $gray-2;
 			}
 
@@ -87,6 +93,97 @@
 
 	&:nth-of-type(even) .catalog-filter__select {
 		background-color: $gray-8;
+	}
+
+	&--mob {
+		display: none;
+		grid-column: span 12;
+		background: #fff;
+		padding: 20px;
+		border-top: 1px solid $gray-5;
+		border-left: 1px solid $gray-5;
+		border-right: 1px solid $gray-5;
+		justify-content: space-between;
+		align-items: center;
+
+		& > span {
+
+			&:first-of-type {
+				font-family: $title-font;
+				font-size: 18px;
+				font-weight: 400;
+
+				@at-root .catalog-filter.fixed #{&} {
+					color: white;
+				}
+
+				@media (max-width: 768px) {
+					font-size: 14px;
+				}
+			}
+
+			&:last-of-type {
+				font-size: 18px;
+				color: $gray-1;
+
+				@at-root .catalog-filter.fixed #{&} {
+					color: $gray-5;
+				}
+
+				@at-root .catalog-filter.mob-active #{&} {
+					display: none;
+				}
+
+				@media (max-width: 768px) {
+					font-size: 14px;
+				}
+			}
+		}
+
+
+		@media (max-width: 991px) {
+			display: flex !important;
+		}
+
+		@at-root .catalog-filter.fixed #{&} {
+			border-top: unset;
+			border-bottom: 1px solid $gray-5;
+			background-color: $text-color;
+			border-color: $text-color;
+		}
+
+		@at-root .catalog-filter.fixed:not(.catalog-filter--fast) #{&} {
+			animation: slowBackgroundColor 0.15s;
+		}
+
+		@at-root .catalog-filter.fixed.catalog-filter--fast #{&} {
+			transition: 0s !important;
+		}
+
+		@at-root .catalog-filter.mob-active #{&} {
+			border-bottom: 1px solid $gray-1;
+		}
+	}
+
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+
+@keyframes slowBackgroundColor {
+	0% {
+		background-color: #fff;
+		border-color: $gray-5;
+	}
+
+	99% {
+		background-color: #fff;
+		border-color: $gray-5;
+	}
+
+	100% {
+		background-color: $text-color;
+		border-color: $text-color;
 	}
 }
 
@@ -114,4 +211,148 @@
 	&:hover {
 		box-shadow: inset 0 0 0 8px $gray-5;
 	}
+}
+
+.catalog-filter__mob {
+	display: none;
+	padding: 100px 0 40px;
+	overflow-x: auto;
+
+	@at-root .catalog-filter.mob-active #{&} {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background-color: #272727;
+	}
+}
+
+.catalog-filter__close {
+	display: none;
+	background: rgba(255, 255, 255, .6);
+	border: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	cursor: pointer;
+	height: 44px;
+	margin: 0;
+	padding: 10px;
+	position: relative;
+	-webkit-transition: color .2s;
+	-o-transition: color .2s;
+	transition: color .2s;
+	vertical-align: top;
+	visibility: inherit;
+	width: 44px;
+	color: #ccc;
+
+	@at-root .catalog-filter.mob-active #{&} {
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	@media (max-width:  768px) {
+		width: 39px;
+		height: 39px;
+		background: unset;
+
+		svg {
+			fill: $gray-8;
+		}
+	}
+}
+
+.catalog-filter__flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.catalog-filter__group {
+	margin-bottom: 35px;
+	margin-right: 20px;
+	margin-left: 20px;
+	width: 100%;
+
+	@media (min-width: 650px) {
+		width: calc(33% - 40px);
+	}
+
+	@media (min-width: 425px) {
+		width: calc(50% - 40px);
+	}
+}
+
+.catalog-filter__group-title {
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+
+/* The container */
+.catalog-filter__label {
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding-left: 65px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 14px;
+	min-height: 28px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: $gray-3;
+}
+
+/* Hide the browser's default checkbox */
+.catalog-filter__label input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+	display: none;
+}
+
+/* Create a custom checkbox */
+.catalog-filter__checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 28px;
+	width: 28px;
+	border-radius: 3px;
+	background-color: $gray-8;
+	opacity: 0.1;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .catalog-filter__checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.catalog-filter__label input:checked ~ .catalog-filter__checkmark {
+	opacity: 1;
+}
+
+/* Create the catalog-filter__checkmark/indicator (hidden when not checked) */
+.catalog-filter__checkmark:after {
+	content: "";
+	background: url('/img/check.svg');
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 8px;
 }

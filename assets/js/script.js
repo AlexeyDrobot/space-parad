@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 	// Иницализация Fancybox без дополнительных кнопок
 	$('[data-fancybox]').fancybox({
-		buttons: ["close"],
+		buttons: ["zoom", "close"],
 		closeExisting: true
 	});
 

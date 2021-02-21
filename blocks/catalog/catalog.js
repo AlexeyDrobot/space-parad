@@ -11,13 +11,37 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	$('.catalog__popular-slider').slick({
-		//centerMode: true,
-		//centerPadding: '0',
 		dots: false,
 		arrows: true,
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					centerMode: true,
+					centerPadding: '100px',
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					centerMode: true,
+					centerPadding: '60px',
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 375,
+				settings: {
+					centerMode: true,
+					centerPadding: '0px',
+					slidesToShow: 1,
+				}
+			}
+	]
 	});
 	$('.catalog__article-slider').slick({
 		dots: true,

@@ -32,49 +32,49 @@ document.addEventListener('DOMContentLoaded', function () {
 								{
 									breakpoint: 992,
 									settings: {
-										slidesToShow: 10,
+										slidesToShow: 14,
 									}
 								},
 								{
 									breakpoint: 900,
 									settings: {
-										slidesToShow: 10,
+										slidesToShow: 12,
 									}
 								},
 								{
 									breakpoint: 850,
 									settings: {
-										slidesToShow: 8,
+										slidesToShow: 10,
 									}
 								},
 								{
 									breakpoint: 775,
 									settings: {
-										slidesToShow: 7,
+										slidesToShow: 9,
 									}
 								},
 								{
 									breakpoint: 700,
 									settings: {
-										slidesToShow: 6,
+										slidesToShow: 7,
 									}
 								},
 								{
 									breakpoint: 625,
 									settings: {
-										slidesToShow: 5,
+										slidesToShow: 6,
 									}
 								},
 								{
 									breakpoint: 550,
 									settings: {
-										slidesToShow: 4,
+										slidesToShow: 5,
 									}
 								},
 								{
 									breakpoint: 420,
 									settings: {
-										slidesToShow: 3,
+										slidesToShow: 4,
 									}
 								}
 							]

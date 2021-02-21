@@ -98,15 +98,32 @@
 						<div class="catalog__section catalog_first-section">
 							<div class="catalog__container">
 								<div class="catalog__breadcrumb-wrap">
-									@import "breadcrumb/breadcrumb.html"
+									<div class="breadcrumb catalog__breadcrumb">
+										<ol class="breadcrumb__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+											<li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+												<a href="/" title="Главная" itemid="/&quot;" itemprop="item" itemscope="" itemtype="http://schema.org/Thing">
+													<span itemprop="name">Home</span>
+												</a>
+												<meta content="1" itemprop="position">
+											</li>
+											<li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+												<span itemid="/news/&quot;" itemprop="item" itemscope="" itemtype="http://schema.org/Thing">
+													<span itemprop="name">Catalog</span>
+												</span>
+												<meta content="2" itemprop="position">
+											</li>
+										</ol>
+									</div>
+									<p class="catalog__qoute">В любом интерьере, где есть натуральный камень, присутствует особая
+										природная
+										сила,
+										по ощущение не сравнимая больше ни с чем. Поэтому к выбору мрамора или гранита надо подходить с
+										большим
+										вниманием. Витиеватый весь в прожилках камень кажется гладким, но стоит провести рукой - понимаешь
+										что
+										глаза
+										обманулию Ощутить слегка шероховатую поверхность никак не ожидаешь.</p>
 								</div>
-								<p class="catalog__qoute">В любом интерьере, где есть натуральный камень, присутствует особая природная
-									сила,
-									по ощущение не сравнимая больше ни с чем. Поэтому к выбору мрамора или гранита надо подходить с
-									большим
-									вниманием. Витиеватый весь в прожилках камень кажется гладким, но стоит провести рукой - понимаешь что
-									глаза
-									обманулию Ощутить слегка шероховатую поверхность никак не ожидаешь.</p>
 							</div>
 						</div>
 						<div class="catalog__section catalog__second-section">
@@ -118,6 +135,190 @@
 						</div>
 						<section class="catalog__products-section catalog__filter-wrap">
 							<div class="catalog-filter">
+								<div class="catalog-filter__item catalog-filter__item--mob js-mob-filter">
+									<span>Filters</span>
+									<span>All</span>
+
+									<form class="catalog-filter__mob">
+										<div class="catalog-filter__flex">
+											<div class="catalog-filter__group">
+												<p class="catalog-filter__group-title">Group name</p>
+												<ul class="catalog-filter__list">
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 1
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 2
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 3
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 4
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+												</ul>
+											</div>
+											<div class="catalog-filter__group">
+												<p class="catalog-filter__group-title">Group name</p>
+												<ul class="catalog-filter__list">
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 1
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 2
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 3
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 4
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+												</ul>
+											</div>
+											<div class="catalog-filter__group">
+												<p class="catalog-filter__group-title">Group name</p>
+												<ul class="catalog-filter__list">
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 1
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 2
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 3
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 4
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+												</ul>
+											</div>
+											<div class="catalog-filter__group">
+												<p class="catalog-filter__group-title">Group name</p>
+												<ul class="catalog-filter__list">
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 1
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 2
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 3
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 4
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+												</ul>
+											</div>
+											<div class="catalog-filter__group">
+												<p class="catalog-filter__group-title">Group name</p>
+												<ul class="catalog-filter__list">
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 1
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 2
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 3
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 4
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+												</ul>
+											</div>
+											<div class="catalog-filter__group">
+												<p class="catalog-filter__group-title">Group name</p>
+												<ul class="catalog-filter__list">
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 1
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 2
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 3
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+													<li class="catalog-filter__list-item">
+														<label class="catalog-filter__label">Option 4
+															<input type="checkbox" class="catalog-filter__checkbox">
+															<span class="catalog-filter__checkmark"></span>
+														</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+
 								<div class="catalog-filter__item">
 									<select aria-label="Products" class="catalog-filter__select js-filter-item">
 										<option value="1">All</option>
@@ -148,6 +349,12 @@
 								<div class="catalog-filter__item">
 									<button aria-label="Reset filter" type="reset" class="catalog-filter__btn-reset">See all</button>
 								</div>
+
+								<button class="catalog-filter__close" title="Close">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"></path>
+									</svg>
+								</button>
 							</div>
 						</section>
 
@@ -445,7 +652,7 @@
 							</div>
 						</section>
 
-						<section class="catalog__section">
+						<section class="catalog__section catalog__section--about">
 							<div class="catalog__container">
 								<h2 class="catalog__title">About us</h2>
 								<ul class="catalog__ul">
@@ -498,27 +705,34 @@
 							</div>
 						</section>
 						<section class="catalog__section">
-							<div class="catalog-container">
+							<div class="catalog__container catalog__container-tags">
 								<div class="catalog__tags">
 									<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
+									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
 									<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
 									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
 									<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
+									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
 									<a href="javascript:void(0)" class="catalog__tag">Стулья из камня</a>
 									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
 									<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
 									<a href="javascript:void(0)" class="catalog__tag">Стулья из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
-									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
+									<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камн
+										<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Стулья из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Столы из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Изделия из камня</a>
+										<a href="javascript:void(0)" class="catalog__tag">Красивые столы из камня</a>
 								</div>
 							</div>
 						</section>

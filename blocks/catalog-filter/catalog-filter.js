@@ -74,7 +74,36 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(window).resize(function () {
 			filterState = false;
 			filterPosition();
+			$('body').removeClass('no-scroll');
+			$('.catalog-filter__close').click();
 		});
 	}
+
+	let filterCondition;
+	$('.js-mob-filter').on('click', function () {
+		if (!$('.catalog-filter').hasClass('mob-active')) {
+			if ($('.catalog-filter').hasClass('fixed')) {
+				$(this).parents('.catalog-filter').not('.mob-active').addClass('mob-active');
+				filterCondition = true;
+			} else {
+				filterCondition = false;
+				$(this).parents('.catalog-filter').not('.mob-active').addClass('fixed mob-active catalog-filter--fast');
+			}
+
+			$('body').not('.no-scroll').addClass('no-scroll');
+		}
+	});
+
+	$('.catalog-filter__close').on('click', function () {
+
+		if (filterCondition) {
+			$('.catalog-filter').removeClass('mob-active');
+		} else {
+			$('.catalog-filter').removeClass('mob-active fixed catalog-filter--fast');
+		}
+
+		$('body').removeClass('no-scroll');
+
+	});
 
 });
