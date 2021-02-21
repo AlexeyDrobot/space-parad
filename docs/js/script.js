@@ -11,13 +11,33 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false
   });
   $('.catalog__popular-slider').slick({
-    //centerMode: true,
-    //centerPadding: '0',
     dots: false,
     arrows: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        centerMode: true,
+        centerPadding: '100px',
+        slidesToShow: 1
+      }
+    }, {
+      breakpoint: 500,
+      settings: {
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 1
+      }
+    }, {
+      breakpoint: 375,
+      settings: {
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 1
+      }
+    }]
   });
   $('.catalog__article-slider').slick({
     dots: true,
@@ -94,8 +114,34 @@ document.addEventListener('DOMContentLoaded', function () {
     $(window).resize(function () {
       filterState = false;
       filterPosition();
+      $('body').removeClass('no-scroll');
+      $('.catalog-filter__close').click();
     });
   }
+
+  var filterCondition;
+  $('.js-mob-filter').on('click', function () {
+    if (!$('.catalog-filter').hasClass('mob-active')) {
+      if ($('.catalog-filter').hasClass('fixed')) {
+        $(this).parents('.catalog-filter').not('.mob-active').addClass('mob-active');
+        filterCondition = true;
+      } else {
+        filterCondition = false;
+        $(this).parents('.catalog-filter').not('.mob-active').addClass('fixed mob-active catalog-filter--fast');
+      }
+
+      $('body').not('.no-scroll').addClass('no-scroll');
+    }
+  });
+  $('.catalog-filter__close').on('click', function () {
+    if (filterCondition) {
+      $('.catalog-filter').removeClass('mob-active');
+    } else {
+      $('.catalog-filter').removeClass('mob-active fixed catalog-filter--fast');
+    }
+
+    $('body').removeClass('no-scroll');
+  });
 }); // Скрипт добавления файлов в форму
 
 (function ($, window, document, undefined) {
@@ -170,42 +216,42 @@ document.addEventListener('DOMContentLoaded', function () {
               }, {
                 breakpoint: 992,
                 settings: {
-                  slidesToShow: 10
+                  slidesToShow: 14
                 }
               }, {
                 breakpoint: 900,
                 settings: {
-                  slidesToShow: 10
+                  slidesToShow: 12
                 }
               }, {
                 breakpoint: 850,
                 settings: {
-                  slidesToShow: 8
+                  slidesToShow: 10
                 }
               }, {
                 breakpoint: 775,
                 settings: {
-                  slidesToShow: 7
+                  slidesToShow: 9
                 }
               }, {
                 breakpoint: 700,
                 settings: {
-                  slidesToShow: 6
+                  slidesToShow: 7
                 }
               }, {
                 breakpoint: 625,
                 settings: {
-                  slidesToShow: 5
+                  slidesToShow: 6
                 }
               }, {
                 breakpoint: 550,
                 settings: {
-                  slidesToShow: 4
+                  slidesToShow: 5
                 }
               }, {
                 breakpoint: 420,
                 settings: {
-                  slidesToShow: 3
+                  slidesToShow: 4
                 }
               }]
             });
@@ -292,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function () {});
 $(document).ready(function () {
   // Иницализация Fancybox без дополнительных кнопок
   $('[data-fancybox]').fancybox({
-    buttons: ["close"],
+    buttons: ["zoom", "close"],
     closeExisting: true
   }); // Дополнительный класс для корневого элемента, если браузер - IE или Edge
 
