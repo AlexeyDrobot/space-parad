@@ -130,19 +130,29 @@
             </svg>
           </div>
 
-          <div class="news-detail__text-block">
-            <h1>Contrary to popular belief,
-              Lorem Ipsum is not simply random text.</h1>
-            <p>Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi
-              nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. Aenean
-              condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue
-              sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla
-              convallis viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a.</p>
+          <div class="news-detail__breadcrumbs">
+            <nav class="breadcrumb">
+              <ol class="breadcrumb__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a href="/" title="Главная" itemid="" itemprop="item" itemscope="" itemtype="http://schema.org/Thing">
+                    <span itemprop="name">Home</span>
+                  </a>
+                  <meta content="1" itemprop="position">
+                </li>
+                <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <span itemid="/about.html" itemprop="item" itemscope="" itemtype="http://schema.org/Thing">
+                    <span itemprop="name">About Us</span>
+                  </span>
+                  <meta content="2" itemprop="position">
+                </li>
+              </ol>
+            </nav>
           </div>
 
           <div class="news-detail__text-block news-detail__text-block--has-img">
             <img class="news-detail__side-image" src="img/news-detail2.jpg" alt="Contrary to popular belief">
             <div class="news-detail__side-text">
+              <h1>About us</h1>
               <p>Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi
                 nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. </p>
               <p>Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non
@@ -160,7 +170,7 @@
             </div>
           </div>
 
-          <div class="news-preview news-detail__preview-card">
+          <div class="news-preview">
             <div class="news-preview__info">
               <a href="#" class="news-preview__title">
                 <h2>Product Details</h2>
@@ -176,91 +186,94 @@
             </a>
           </div>
 
-          <div class="news-detail__full-image">
-            <img src="img/news-detail3.jpg" alt="Description">
+          <div class="portfolio-preview">
+            <div class="portfolio-preview__head">
+              <h2 class="portfolio-preview__title">Our portfolio</h2>
+              <div class="portfolio-preview__desc">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
+                Vestibulum porttitor imperdiet nisi nec ultrices.
+              </div>
+              <a href="#" target="_blank" class="portfolio-preview__insta-btn">
+                Our instagram
+                <svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M37.767 14.49C37.9155 14.6385 37.9989 14.84 37.9989 15.05C37.9989 15.26 37.9155 15.4615 37.767 15.61L23.517 29.861C23.366 29.9965 23.1689 30.0688 22.9661 30.0632C22.7634 30.0576 22.5705 29.9744 22.4273 29.8308C22.284 29.6872 22.2014 29.4941 22.1963 29.2913C22.1912 29.0886 22.2641 28.8916 22.4 28.741L35.3 15.841L0.791999 15.841C0.586949 15.8337 0.39273 15.7471 0.250247 15.5995C0.107764 15.4519 0.0281372 15.2547 0.0281372 15.0495C0.0281372 14.8443 0.107764 14.6471 0.250247 14.4995C0.39273 14.3519 0.586949 14.2653 0.791999 14.258L35.3 14.258L22.4 1.358C22.2553 1.21073 22.1739 1.01279 22.173 0.806347C22.1721 0.599904 22.2519 0.401276 22.3953 0.252777C22.5387 0.104278 22.7344 0.0176466 22.9408 0.0113373C23.1471 0.00502799 23.3478 0.0795403 23.5 0.219L23.519 0.238001L37.767 14.49Z" fill="#A7ACA7" />
+                  <path d="M21.869 0.799999C21.8691 0.904351 21.89 1.00763 21.9305 1.1038C21.9711 1.19996 22.0304 1.28706 22.105 1.36L36.053 15.05L22.104 28.739C22.0304 28.8131 21.9724 28.9012 21.9335 28.9981C21.8946 29.0951 21.8755 29.1988 21.8773 29.3032C21.8792 29.4077 21.902 29.5106 21.9444 29.6061C21.9867 29.7016 22.0478 29.7876 22.124 29.859C22.2757 30.0017 22.4762 30.0812 22.6845 30.0812C22.8928 30.0812 23.0933 30.0017 23.245 29.859L37.763 15.609C37.8377 15.5362 37.8971 15.4492 37.9377 15.3531C37.9782 15.257 37.9991 15.1538 37.9991 15.0495C37.9991 14.9452 37.9782 14.842 37.9377 14.7459C37.8971 14.6498 37.8377 14.5628 37.763 14.49L23.245 0.24C23.0924 0.0911431 22.8877 0.00782394 22.6745 0.00782394C22.4613 0.00782394 22.2566 0.0911431 22.104 0.24C22.0296 0.313023 21.9704 0.400164 21.9301 0.496321C21.8897 0.592478 21.869 0.695719 21.869 0.799999V0.799999Z" fill="#A7ACA7" />
+                  <path opacity="0.3" d="M4.98239e-07 15.05C-0.00186513 15.262 0.0805002 15.4661 0.229003 15.6174C0.377505 15.7687 0.579999 15.8549 0.792 15.857L37.208 15.857C37.42 15.8549 37.6225 15.7687 37.771 15.6174C37.9195 15.4661 38.0019 15.262 38 15.05C38.0019 14.838 37.9195 14.6339 37.771 14.4826C37.6225 14.3313 37.42 14.2451 37.208 14.243L0.792 14.243C0.579999 14.2451 0.377505 14.3313 0.229003 14.4826C0.0805002 14.6339 -0.00186513 14.838 4.98239e-07 15.05V15.05Z" fill="#A7ACA7" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="portfolio-preview__grid">
+              <a data-fancybox="images" data-caption="Название работы" href="img/portfolio1.png" class="portfolio-preview__item">
+                <img src="img/portfolio1.png" alt="Название работы" class="portfolio-preview__item-image">
+              </a>
+              <a data-fancybox="images" data-caption="Название работы" href="img/portfolio2.png" class="portfolio-preview__item">
+                <img src="img/portfolio2.png" alt="Название работы" class="portfolio-preview__item-image">
+              </a>
+              <a data-fancybox="images" data-caption="Название работы" href="img/portfolio3.png" class="portfolio-preview__item">
+                <img src="img/portfolio3.png" alt="Название работы" class="portfolio-preview__item-image">
+              </a>
+              <a data-fancybox="images" data-caption="Название работы" href="img/portfolio4.png" class="portfolio-preview__item">
+                <img src="img/portfolio4.png" alt="Название работы" class="portfolio-preview__item-image">
+              </a>
+            </div>
           </div>
 
-          <div class="news-detail__text-block">
-            <h2>About us</h2>
-            <ul>
-              <li>Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet
-                nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend.
-              </li>
-              <li>Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non
-                ullamcorper augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et
-                nisi varius nulla convallis viverra
-              </li>
-            </ul>
-            <p>
-              Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi
+          <div class="video-section video-section--has-gray-cover">
+            <h2 class="video-section__title">Contrary to popular belief,
+              Lorem Ipsum is not simply random text.</h2>
+
+            <div class="video">
+              <video class="video__item" poster="img/video-cover.png">
+                <source src="video/video-sample.mp4">
+              </video>
+              <button class="video__play-btn js_play-video" aria-label="Воспроизвести">
+                <svg class="video__play-icon" width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.535 13.591C24.4478 13.4392 24.3218 13.3132 24.17 13.226L12.826 6.65L12.769 6.621L1.48201 0.131001C1.33162 0.044756 1.1612 -0.000440572 0.98783 -5.86344e-05C0.814464 0.000323303 0.644243 0.0462705 0.494233 0.133177C0.344222 0.220084 0.219693 0.344897 0.133126 0.495104C0.0465593 0.645311 0.000996797 0.815634 0.00100773 0.989001V27.184C0.000799979 27.3655 0.0505917 27.5435 0.144917 27.6986C0.239243 27.8537 0.374457 27.9797 0.535725 28.063C0.696993 28.1463 0.878082 28.1835 1.05912 28.1706C1.24016 28.1578 1.41415 28.0953 1.56201 27.99L12.827 21.517L24.17 14.941C24.3974 14.8104 24.5636 14.5947 24.6321 14.3416C24.7005 14.0884 24.6656 13.8184 24.535 13.591Z" fill="black" />
+                </svg>
+                Воспроизвести видео
+              </button>
+            </div>
+
+            <div class="video-section__info">
+              <h3 class="video-section__info-title">Duble Cube</h3>
+              <span class="video-section__info-desc">Pellentesque accumsan convallis pretium</span>
+              <p class="video-section__info-content">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
+                Vestibulum porttitor imperdiet nisi
+                nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. Aenean
+                condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper
+                augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius
+                nulla convallis viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-info">
+          <div class="category-info__cards">
+            <a href="#" class="category-info__image-wrap">
+              <img src="img/category-desc-image.png" alt="Название категории">
+            </a>
+            <div class="category-info__link-wrap">
+              <a href="#" target="_blank" class="category-info__link">
+                Перейти в каталог
+                <svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M37.767 14.49C37.9155 14.6385 37.9989 14.84 37.9989 15.05C37.9989 15.26 37.9155 15.4615 37.767 15.61L23.517 29.861C23.366 29.9965 23.1689 30.0688 22.9661 30.0632C22.7634 30.0576 22.5705 29.9744 22.4273 29.8308C22.284 29.6872 22.2014 29.4941 22.1963 29.2913C22.1912 29.0886 22.2641 28.8916 22.4 28.741L35.3 15.841L0.791999 15.841C0.586949 15.8337 0.39273 15.7471 0.250247 15.5995C0.107764 15.4519 0.0281372 15.2547 0.0281372 15.0495C0.0281372 14.8443 0.107764 14.6471 0.250247 14.4995C0.39273 14.3519 0.586949 14.2653 0.791999 14.258L35.3 14.258L22.4 1.358C22.2553 1.21073 22.1739 1.01279 22.173 0.806347C22.1721 0.599904 22.2519 0.401276 22.3953 0.252777C22.5387 0.104278 22.7344 0.0176466 22.9408 0.0113373C23.1471 0.00502799 23.3478 0.0795403 23.5 0.219L23.519 0.238001L37.767 14.49Z" fill="#A7ACA7" />
+                  <path d="M21.869 0.799999C21.8691 0.904351 21.89 1.00763 21.9305 1.1038C21.9711 1.19996 22.0304 1.28706 22.105 1.36L36.053 15.05L22.104 28.739C22.0304 28.8131 21.9724 28.9012 21.9335 28.9981C21.8946 29.0951 21.8755 29.1988 21.8773 29.3032C21.8792 29.4077 21.902 29.5106 21.9444 29.6061C21.9867 29.7016 22.0478 29.7876 22.124 29.859C22.2757 30.0017 22.4762 30.0812 22.6845 30.0812C22.8928 30.0812 23.0933 30.0017 23.245 29.859L37.763 15.609C37.8377 15.5362 37.8971 15.4492 37.9377 15.3531C37.9782 15.257 37.9991 15.1538 37.9991 15.0495C37.9991 14.9452 37.9782 14.842 37.9377 14.7459C37.8971 14.6498 37.8377 14.5628 37.763 14.49L23.245 0.24C23.0924 0.0911431 22.8877 0.00782394 22.6745 0.00782394C22.4613 0.00782394 22.2566 0.0911431 22.104 0.24C22.0296 0.313023 21.9704 0.400164 21.9301 0.496321C21.8897 0.592478 21.869 0.695719 21.869 0.799999V0.799999Z" fill="#A7ACA7" />
+                  <path opacity="0.3" d="M4.98239e-07 15.05C-0.00186513 15.262 0.0805002 15.4661 0.229003 15.6174C0.377505 15.7687 0.579999 15.8549 0.792 15.857L37.208 15.857C37.42 15.8549 37.6225 15.7687 37.771 15.6174C37.9195 15.4661 38.0019 15.262 38 15.05C38.0019 14.838 37.9195 14.6339 37.771 14.4826C37.6225 14.3313 37.42 14.2451 37.208 14.243L0.792 14.243C0.579999 14.2451 0.377505 14.3313 0.229003 14.4826C0.0805002 14.6339 -0.00186513 14.838 4.98239e-07 15.05V15.05Z" fill="#A7ACA7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="category-info__desc">
+            <p>Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi
               nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. Aenean
               condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue
-              sodales viverra.
-            </p>
-            <p>Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla
-              convallis viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a. Duis non neque
-              non metus pharetra commodo id a lacus. Donec tristique mauris non dui dictum, quis vulputate sapien
-              porta. Donec tristique nec leo ut eleifend. Nunc commodo, tellus a hendrerit sodales, est lorem
-              consequat nunc, a mollis sem mi ullamcorper libero. Sed sed ante nunc.</p>
-            <ol>
-              <li>Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet
-                nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend.
-              </li>
-              <li>Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non
-                ullamcorper augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et
-                nisi varius nulla convallis viverra</li>
-              <li>Sed tristique sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet
-                nisi nec ultrices. Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend.
-              </li>
-              <li>Aenean condimentum mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non
-                ullamcorper augue sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et
-                nisi varius nulla convallis viverra</li>
-            </ol>
-          </div>
-
-          <div class="news-slider">
-            <div class="news-slider__stage">
-              <div class="news-card">
-                <a href="#" class="news-card__label">Новости</a>
-                <a href="#" class="news-card__title">Duble Cube</a>
-                <span class="news-card__pubdate">02.10.2020</span>
-
-                <p class="news-card__preview">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
-                  Vestibulum porttitor imperdiet nisi nec ultrices. </p>
-              </div>
-              <div class="news-card">
-                <a href="#" class="news-card__label">Статьи</a>
-                <a href="#" class="news-card__title">Duble Cube</a>
-                <span class="news-card__pubdate">02.10.2020</span>
-
-                <p class="news-card__preview">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
-                  Vestibulum porttitor imperdiet nisi nec ultrices. </p>
-              </div>
-              <div class="news-card">
-                <a href="#" class="news-card__label">Новости</a>
-                <a href="#" class="news-card__title">Duble Cube</a>
-                <span class="news-card__pubdate">02.10.2020</span>
-
-                <p class="news-card__preview">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
-                  Vestibulum porttitor imperdiet nisi nec ultrices. </p>
-              </div>
-              <div class="news-card">
-                <a href="#" class="news-card__label">Новости</a>
-                <a href="#" class="news-card__title">Duble Cube</a>
-                <span class="news-card__pubdate">02.10.2020</span>
-
-                <p class="news-card__preview">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
-                  Vestibulum porttitor imperdiet nisi nec ultrices. </p>
-              </div>
-              <div class="news-card">
-                <a href="#" class="news-card__label">Новости</a>
-                <a href="#" class="news-card__title">Duble Cube</a>
-                <span class="news-card__pubdate">02.10.2020</span>
-
-                <p class="news-card__preview">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
-                  Vestibulum porttitor imperdiet nisi nec ultrices. </p>
-              </div>
-            </div>
+              sodales viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla
+              convallis viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a. Sed tristique
+              sem sed velit vehicula, quis dictum ante tincidunt. Vestibulum porttitor imperdiet nisi nec ultrices.
+              Pellentesque accumsan convallis pretium. Mauris vulputate ut libero ac eleifend. Aenean condimentum
+              mauris enim, et mattis nulla varius eget. Integer gravida risus massa, non ullamcorper augue sodales
+              viverra. Fusce fermentum mi ac ex luctus, in pretium leo euismod. Fusce et nisi varius nulla convallis
+              viverra. Suspendisse mattis sollicitudin nulla, eget tempor nunc ullamcorper a.</p>
           </div>
         </div>
 

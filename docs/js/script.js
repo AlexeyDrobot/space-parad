@@ -125,8 +125,168 @@ document.addEventListener('DOMContentLoaded', function () {
     $(this).prev().find('span').html('Прикрепить файл');
     $(this).removeClass('form__fileinput-close--active');
   });
+  $('.form__group input').focus(function () {
+    $(this).siblings('label').css('transform', 'translateY(calc(-50% - 23px))');
+  });
+  $('.form__group input').focusout(function () {
+    if (!$(this).val()) {
+      $(this).siblings('label').attr('style', '');
+    }
+  });
 })(jQuery, window, document);
 
+document.addEventListener('DOMContentLoaded', function () {
+  $('.modal__success-btn').click(function () {
+    $.fancybox.close();
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  $('.product-filter__item-name').each(function () {
+    $(this).click(function () {
+      var parent = $(this).parent(),
+          dropDown = $(this).next();
+      parent.toggleClass('active');
+
+      if (parent.hasClass('active')) {
+        dropDown.slideDown('fast');
+        dropDown.children('.selection-slider').each(function () {
+          if (!$(this).hasClass('slick-initialized')) {
+            $(this).slick({
+              centerMode: false,
+              slidesToShow: 6,
+              infinite: true,
+              draggable: true,
+              swipe: true,
+              responsive: [{
+                breakpoint: 1440,
+                settings: {
+                  slidesToShow: 5
+                }
+              }, {
+                breakpoint: 1300,
+                settings: {
+                  slidesToShow: 4
+                }
+              }, {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 10
+                }
+              }, {
+                breakpoint: 900,
+                settings: {
+                  slidesToShow: 10
+                }
+              }, {
+                breakpoint: 850,
+                settings: {
+                  slidesToShow: 8
+                }
+              }, {
+                breakpoint: 775,
+                settings: {
+                  slidesToShow: 7
+                }
+              }, {
+                breakpoint: 700,
+                settings: {
+                  slidesToShow: 6
+                }
+              }, {
+                breakpoint: 625,
+                settings: {
+                  slidesToShow: 5
+                }
+              }, {
+                breakpoint: 550,
+                settings: {
+                  slidesToShow: 4
+                }
+              }, {
+                breakpoint: 420,
+                settings: {
+                  slidesToShow: 3
+                }
+              }]
+            });
+          }
+        });
+      } else {
+        dropDown.slideUp('fast');
+      }
+    });
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  $('.product-slider').each(function () {
+    $(this).slick({
+      centerMode: false,
+      slidesToShow: 4,
+      arrows: true,
+      dots: false,
+      responsive: [{
+        breakpoint: 2100,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 1200,
+        settings: {
+          centerMode: true,
+          centerPadding: '190px',
+          slidesToShow: 1,
+          draggable: true,
+          swipe: true
+        }
+      }, {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          draggable: true,
+          swipe: true
+        }
+      }, {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 4,
+          draggable: true,
+          swipe: true
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          draggable: true,
+          swipe: true
+        }
+      }, {
+        breakpoint: 450,
+        settings: {
+          centerMode: true,
+          centerPadding: '100px',
+          slidesToShow: 1,
+          draggable: true,
+          swipe: true
+        }
+      }, {
+        breakpoint: 375,
+        settings: {
+          centerMode: true,
+          centerPadding: '70px',
+          slidesToShow: 1,
+          draggable: true,
+          swipe: true
+        }
+      }]
+    });
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {});
 "use strict";
 
 $(document).ready(function () {
