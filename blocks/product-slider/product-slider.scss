@@ -10,10 +10,31 @@
 
 	.slick-next {
 		right: 0;
+		top: 50%;
+
+		@media (max-width: 1200px) {
+			right: 30px;
+			background-color: #fff;
+		}
 	}
 
 	.slick-prev {
 		left: 0;
+		top: 50%;
+
+		@media (max-width: 1200px) {
+			left: 30px;
+			background-color: #fff;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	@media (max-width: 991px) {
+		margin-bottom: 30px;
 	}
 }
 
@@ -31,6 +52,15 @@
 	background-color: $gray-8;
 	padding: 30px;
 	outline: none;
+
+	@media (max-width: 991px) {
+		height: 260px;
+	}
+
+	@media (max-width: 768px) {
+		height: 120px;
+		width: 150px;
+	}
 }
 
 .product-slider__img {
