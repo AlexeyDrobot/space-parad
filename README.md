@@ -4,6 +4,7 @@
 - [Каталог](https://starushchenko.github.io/encor.by/catalog.html)
 - [Категории](https://starushchenko.github.io/encor.by/category-products.html)
 - [Страница товара](https://starushchenko.github.io/encor.by/product.html)
+- [Страница About](https://starushchenko.github.io/encor.by/about.html)
 - [Список новостей](https://starushchenko.github.io/encor.by/news.html)
 - [Новость детально](https://starushchenko.github.io/encor.by/news-detail.html)
 
