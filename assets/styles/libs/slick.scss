@@ -124,6 +124,7 @@
 .slick-arrow {
 	background: $gray-8 url(../img/arrow-left-gray.svg) center / contain no-repeat;
 	background-size: 25% !important;
+	background-position-x: 46%;
 	z-index: 2;
 	position: absolute;
 	top: 45%;
@@ -162,6 +163,7 @@
 
 .slick-next:hover, .slick-prev:hover {
 	background: $gray-5 url(../img/arrow-left-gray.svg) center no-repeat;
+	background-position-x: 46%;
 }
 
 .slick-dots {
