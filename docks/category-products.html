@@ -108,78 +108,30 @@
       </div>
       <div class="layout__content">
 
-        <div class="contacts">
-          <div class="contacts__container">
-            <div class="breadcrumb contacts__breadcrumb">
-              <ol class="breadcrumb__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                  <a href="/" title="Главная" itemid="/&quot;" itemprop="item" itemscope="" itemtype="http://schema.org/Thing">
-                    <span itemprop="name">Home</span>
-                  </a>
-                  <meta content="1" itemprop="position">
-                </li>
-                <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                  <span itemid="/news/&quot;" itemprop="item" itemscope="" itemtype="http://schema.org/Thing">
-                    <span itemprop="name">Contacts</span></span>
-                  <meta content="2" itemprop="position">
-                </li>
-              </ol>
-            </div>
-            <div class="contacts__flex">
-              <div class="contacts__map-box">
-                <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.5501525259656!2d27.53244773352707!3d53.90419911221856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcff10cf642f1%3A0x52b0a782634578a8!2z0YPQuy4g0JrQu9Cw0YDRiyDQptC10YLQutC40L0gNTEsINCc0LjQvdGB0LogMjIwMDA0!5e0!3m2!1sru!2sby!4v1613581686490!5m2!1sru!2sby" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="products-category">
 
-                <div class="contacts__info">
-                  <div class="contacts__info-box">
-                    <div class="contacts__info-link-wrap">
-                      <p class="contacts__info-title">Contacts</p>
-                      <a href="tel:+375222712709" class="contacts__info-link">+375 222 71-27-09</a>
-                      <span>тел/факс</span>
-                    </div>
-                    <div class="contacts__info-link-wrap">
-                      <a href="tel:+37529311175" class="contacts__info-link">+375 29 311-17-55</a>
-                    </div>
-                  </div>
-                  <div class="contacts__info-box">
-                    <p class="contacts__info-title">General adress</p>
-                    <p class="contacts__info-address">220004, Республика&nbsp;Беларусь г.&nbsp;Минск, ул.&nbsp;К.&nbsp;Цеткин, 51, 6&nbsp;этаж
-                      ст.&nbsp;метро&nbsp;Фрунзенская</p>
-                  </div>
-                </div>
-              </div>
+          <section class="products-category__container">
+            <h1 class="products-category__title">Категории</h1>
+          </section>
 
-              <div class="contacts__form-box">
-                <h1 class="contacts__form-title">Someone table</h1>
-                <p class="contacts__form-text">Sed tristique sem sed velit vehicula, quis dictum ante tincidunt.
-                  Vestibulum porttitor
-                  imperdiet nisi nec ultrices. Pellentesque accumsan convallis pretium.</p>
-
-
-                <form action="/" class="form contact__form">
-                  <div class="form__line">
-                    <div class="form__group">
-                      <label for="name">Имя</label>
-                      <input type="text" name="name" id="name" aria-label="Имя">
-                    </div>
-                  </div>
-                  <div class="form__line">
-                    <div class="form__group">
-                      <label for="email">Email</label>
-                      <input type="text" name="E-mail" id="email" aria-label="E-mail">
-                    </div>
-                  </div>
-                  <div class="form__line">
-                    <div class="form__group">
-                      <label for="message">Сообщение</label>
-                      <input type="text" name="message" id="message" aria-label="Сообщение">
-                    </div>
-                  </div>
-
-                  <button class="button contacts__form-button" type="submit">Отправить</button>
-                </form>
-              </div>
-            </div>
+          <div class="card-grid">
+            <a href="#" class="category-card card-grid__item card-grid__item--xxl">
+              <span class="category-card__title">Столы</span>
+              <span class="category-card__title-add">Столы</span>
+              <img src="img/category-croped2.png" class="category-card__image" alt="Столы">
+            </a>
+            <a href="#" class="category-card card-grid__item card-grid__item--m">
+              <span class="category-card__title">Стулья</span>
+              <span class="category-card__title-add">Стулья</span>
+              <img src="img/category-croped1.png" class="category-card__image" alt="Стулья">
+            </a>
+            <a href="#" class="category-card card-grid__item card-grid__item--s">
+              <span class="category-card__title">Аксессуары</span>
+              <span class="category-card__title-add">Аксессуары</span>
+              <img src="img/category-croped3.png" class="category-card__image" alt="Аксессуары">
+            </a>
           </div>
+
         </div>
 
         <div class="footer">
@@ -408,7 +360,6 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.nice-select.min.js"></script>
   <script src="js/script.min.js"></script>
-  <script src="js/script-zhukouski.js"></script>
 
 </body>
 

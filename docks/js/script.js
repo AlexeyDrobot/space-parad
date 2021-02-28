@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
       filterPosition();
     });
     $(window).resize(function () {
+      $('.catalog__filter-wrap').height($('.catalog-filter').height());
       filterState = false;
       filterPosition();
       $('body').removeClass('no-scroll');
