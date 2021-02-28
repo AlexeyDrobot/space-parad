@@ -44,10 +44,11 @@
 	position: relative;
 
 	.lang-toggler {
-		position: fixed;
-		bottom: 0;
+		position: absolute;
+		top: calc(100vh - 80px);
 		right: 0;
 		padding: 30px 20px;
+		transform: translateY(-100%);
 	}
 }
 
@@ -73,7 +74,7 @@
 
 		&:hover {
 			path {
-				fill: $gray-3
+				fill: $gray-5
 			}
 		}
 	}
