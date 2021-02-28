@@ -41,17 +41,17 @@
 	}
 
 	&:not(.active):hover {
-		transform: scale(1.2);
+		transform: scale(1.05);
 	}
 
 	@at-root .selection-slider--texture #{&} {
 		&:not(.active):hover {
-			transform: scale(1.2);
+			transform: scale(1.05);
 
 			.selection-slider__img {
 
 				&:hover {
-					transform: scale(2);
+					transform: scale(1.05);
 				}
 			}
 		}
