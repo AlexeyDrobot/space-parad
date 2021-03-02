@@ -119,6 +119,17 @@
 	}
 }
 
+.layout--short {
+	.layout__r-side {
+		position: static;
+	}
+	.layout__r-side .lang-toggler {
+		top: unset;
+		bottom: 0;
+		transform: none;
+	}
+}
+
 @media (max-width: 991px) {
 	.layout {
 
