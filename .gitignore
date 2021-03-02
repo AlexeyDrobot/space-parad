@@ -7,3 +7,8 @@ design/
 .idea
 .idea/vcs.xml
 package-lock.json
+
+# Firebase ignore files
+.firebase
+.firebaserc
+firebase.json
