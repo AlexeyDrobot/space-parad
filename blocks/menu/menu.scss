@@ -206,6 +206,7 @@
 	}
 	.menu__header {
 		min-height: 66px;
+		height: 66px;
 
 		.menu__l-divider {
 			display: none;
@@ -253,9 +254,15 @@
 	}
 	.menu__close {
 		width: 66px;
-		height: 69px;
+		height: 65px;
 		background: #4E4E4E;
 		border-bottom: 1px solid $gray-2;
+		box-sizing: content-box;
+		position: absolute;
+		max-width: 66px;
+		padding: 0;
+		top: 0;
+		right: 0;
 	}
 	.menu__list-wrap {
 		display: flex;
