@@ -1,0 +1,83 @@
+// В этом файле должны быть стили для БЭМ-блока footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.footer {
+	background-color: $main-color;
+	padding-top: 55px;
+	padding-bottom: 40px;
+}
+
+.footer__container {
+	@include container;
+}
+
+.footer__title {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.footer__social {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 60px -30px 0;
+	max-width: 850px;
+}
+
+.footer__social-link {
+	width: calc(33% - 60px);
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	text-decoration: unset;
+	color: inherit;
+	transition: 0.3s;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 40px;
+
+	svg path {
+		transition: 0.3s;
+	}
+
+	&:hover {
+		color: $hover-color;
+	}
+
+	svg:hover {
+		path {
+			fill: $hover-color;
+		}
+	}
+
+	span {
+		margin-left: 20px;
+	}
+}
+
+.footer__bottom {
+	display: flex;
+	align-items: center;
+}
+
+.footer__contract-offer {
+	text-decoration: unset;
+	color: inherit;
+	margin-right: 30px;
+	transition: .3s;
+
+	&:hover {
+		color: $hover-color;
+	}
+}
+
+.footer__bottom-box {
+	min-width: 170px;
+	min-height: 60px;
+}

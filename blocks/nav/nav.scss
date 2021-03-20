@@ -1,0 +1,24 @@
+// В этом файле должны быть стили для БЭМ-блока nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+.nav__item {
+	text-decoration: unset;
+	color: inherit;
+	margin-left: 20px;
+	margin-right: 20px;
+	transition: 0.3s;
+
+	&:hover {
+		color: $hover-color;
+	}
+}

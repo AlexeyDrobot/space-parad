@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока authentication, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.authentication {
+	background-color: $dark-color;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.authentication__container {
+	@include container;
+}
+
+.authentication__flex {
+	display:  flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.authentication__btn {
+	margin-left: 10px;
+	margin-right: 10px;
+
+	&:last-of-type {
+		margin-left: auto;
+	}
+}
