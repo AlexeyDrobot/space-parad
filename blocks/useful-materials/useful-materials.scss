@@ -1,0 +1,131 @@
+// В этом файле должны быть стили для БЭМ-блока useful-materials, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.useful-materials {
+	@include container;
+
+	max-width: 955px;
+	margin: 0 auto 160px;
+
+	@media (max-width: 425px) {
+		margin-bottom: 85px;
+	}
+}
+
+.useful-materials__title {
+	font-size: 48px;
+	line-height: 1.1;
+	text-align: center;
+	font-weight: 800;
+	margin-bottom: 90px;
+
+	@media (max-width: 767px) {
+		font-size: 24px;
+	}
+}
+
+.useful-materials__flex {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 600px) {
+		flex-direction: column-reverse;
+	}
+}
+
+.useful-materials__btn-wrap {
+	margin-right: 25px;
+
+	@media (max-width: 600px) {
+		margin-right: unset;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 35px;
+	}
+}
+
+.useful-materials__btn-watch {
+	margin-top: 60px;
+
+	@media (max-width: 600px) {
+		margin-top: unset;
+		margin-left: 15px;
+	}
+}
+
+.useful-materials__img-wrap {
+	overflow: hidden;
+	border-radius: 35px;
+
+	@media (max-width: 600px) {
+		max-width: 425px;
+	}
+}
+
+.useful-materials__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.useful-materials__dropdown-wrap {
+	position: relative;
+	display: inline-block;
+}
+
+.useful-materials__dropdown {
+	display: none;
+	position: absolute;
+	top: calc(100% + 5px);
+	left: 0;
+	right: 0;
+	padding: 15px 25px;
+	background-color: $main-color;
+	border-radius: 15px;
+	z-index: 1;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+
+	@at-root .useful-materials__dropdown-wrap.open #{&} {
+		display: block;
+	}
+}
+
+.useful-materials__dropdown-trigger {
+	&:after {
+		display: inline-block;
+		margin-left: 5px;
+		vertical-align: 5px;
+		content: "";
+		border-top: .3em solid;
+		border-right: .3em solid transparent;
+		border-bottom: 0;
+		border-left: .3em solid transparent;
+
+		@at-root .useful-materials__dropdown-wrap.open #{&} {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.useful-materials__dropdown-list-item {
+	&:not(:last-of-type) {
+		margin-bottom: 12px;
+	}
+}
+
+.useful-materials__dropdown-link {
+	color: inherit;
+	font-size: 14px;
+	text-decoration: unset;
+	font-weight: 700;
+	transition: 0.3s;
+
+
+	&:hover {
+		color: $hover-color;
+	}
+}

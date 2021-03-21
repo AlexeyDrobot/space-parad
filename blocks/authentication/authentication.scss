@@ -7,6 +7,12 @@
 	background-color: $dark-color;
 	padding-top: 30px;
 	padding-bottom: 30px;
+
+	@media (max-width: 550px) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: unset;
+	}
 }
 
 .authentication__container {
@@ -14,17 +20,38 @@
 }
 
 .authentication__flex {
-	display:  flex;
+	display: flex;
 	flex-wrap: wrap;
 	margin-left: -10px;
 	margin-right: -10px;
+	justify-content: space-between;
+
+	@media (max-width: 550px) {
+		margin: 0 -20px;
+		justify-content: center;
+	}
+}
+
+.authentication__btn-wrap {
+	@media (max-width: 550px) {
+		align-self: stretch;
+		background-color: $dark-color;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:last-of-type {
+			margin-top: 20px;
+		}
+	}
 }
 
 .authentication__btn {
 	margin-left: 10px;
 	margin-right: 10px;
 
-	&:last-of-type {
-		margin-left: auto;
+	@media (max-width: 550px) {
+		margin: 10px 10px;
 	}
 }

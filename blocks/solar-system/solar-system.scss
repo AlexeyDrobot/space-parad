@@ -1,0 +1,90 @@
+// В этом файле должны быть стили для БЭМ-блока solar-system, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.solar-system {
+	transform: translateX(-764px);
+}
+
+.solar-system__orbit {
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	&--1 {
+		background-image: url(../img/orbit-3.svg);
+		padding: 200px;
+	}
+
+	&--2 {
+		background-image: url(../img/orbit-2.svg);
+
+		padding: 200px;
+	}
+
+	&--3 {
+		width: 1000px;
+		height: 1000px;
+		background-image: url(../img/orbit-1.svg);
+	}
+}
+
+
+.solar-system__list-of-planets {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.solar-system__planet-wrapper {
+	position: relative;
+}
+
+.solar-system__planet {
+	position: relative;
+	z-index: 2;
+}
+
+.solar-system__planet-info {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: none;
+	z-index: 1;
+	opacity: 0;
+	transform: translateX(-50%);
+	width: 240px;
+	background-color: $blue-color;
+	border-radius: 10px;
+	padding: 155px 10px 20px;
+
+	@at-root .solar-system__planet-wrapper:hover > #{&},
+	&:hover {
+		display: block;
+		opacity: 1;
+		animation: 0.3s ease-in-out 0s normal none running info-hover;
+	}
+}
+
+@-webkit-keyframes info-hover {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.solar-system__planet-title {
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 1.2;
+	margin-bottom: 10px;
+}
+
+.solar-system__planet-description {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.3;
+	text-align: center;
+}

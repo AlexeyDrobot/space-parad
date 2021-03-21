@@ -9,13 +9,14 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<link rel="stylesheet" href="css/style.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
 <div class="page">
 
-	<header class="header">
+	<header class="header" data-aos="fade-down" data-aos-duration="300">
 		<div class="header__container">
 			<div class="header__flex">
 				<div class="header__box">
@@ -74,6 +75,9 @@
 							<a class="nav__item" href="#">Промо&nbsp;материалы</a>
 						</nav>
 					</div>
+
+					<button class="header-mob__btn header-mob__sign-in button">Вход</button>
+					<button class="header-mob__btn header-mob__registration button button--violet">Регистраиця</button>
 
 					<div class="header__box">
 						<div class="header__social">
@@ -136,6 +140,11 @@
 						</svg>
 						<span>Войти</span>
 					</a>
+					<div class="nav__hamburger">
+						<span class="nav__bar nav__bar--1"></span>
+						<span class="nav__bar nav__bar--2"></span>
+						<span class="nav__bar nav__bar--3"></span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -144,32 +153,34 @@
 	<div class="main-banner">
 		<svg class="main-banner__logo" width="1165" height="558" viewBox="0 0 1165 558" fill="none"
 				 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<g filter="url(#filter0_f)">
-				<path
-					d="M785.328 245.167L805.293 306.965H869.901L817.632 345.158L837.597 406.955L785.328 368.762L733.06 406.955L753.025 345.158L700.756 306.965H765.363L785.328 245.167Z"
-					fill="#AECDFF"/>
+			<g data-aos="fade-down" data-aos-duration="1500">
+				<g filter="url(#filter0_f)">
+					<path
+						d="M785.328 245.167L805.293 306.965H869.901L817.632 345.158L837.597 406.955L785.328 368.762L733.06 406.955L753.025 345.158L700.756 306.965H765.363L785.328 245.167Z"
+						fill="#AECDFF"/>
+					<path
+						d="M785.328 246.794L804.817 307.118L804.929 307.465H805.293H868.369L817.337 344.754L817.045 344.967L817.156 345.312L836.647 405.642L785.623 368.359L785.328 368.143L785.033 368.359L734.009 405.642L753.5 345.312L753.611 344.967L753.32 344.754L702.288 307.465H765.363H765.727L765.839 307.118L785.328 246.794Z"
+						stroke="#F2F2F2"/>
+				</g>
 				<path
 					d="M785.328 246.794L804.817 307.118L804.929 307.465H805.293H868.369L817.337 344.754L817.045 344.967L817.156 345.312L836.647 405.642L785.623 368.359L785.328 368.143L785.033 368.359L734.009 405.642L753.5 345.312L753.611 344.967L753.32 344.754L702.288 307.465H765.363H765.727L765.839 307.118L785.328 246.794Z"
-					stroke="#F2F2F2"/>
-			</g>
-			<path
-				d="M785.328 246.794L804.817 307.118L804.929 307.465H805.293H868.369L817.337 344.754L817.045 344.967L817.156 345.312L836.647 405.642L785.623 368.359L785.328 368.143L785.033 368.359L734.009 405.642L753.5 345.312L753.611 344.967L753.32 344.754L702.288 307.465H765.363H765.727L765.839 307.118L785.328 246.794Z"
-				fill="#88F7FF" stroke="white"/>
-			<g filter="url(#filter1_f)">
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f)">
+					<path
+						d="M785.49 287.512L794.979 317.134H825.685L800.843 335.442L810.332 365.064L785.49 346.757L760.648 365.064L770.137 335.442L745.295 317.134H776.001L785.49 287.512Z"
+						fill="white"/>
+				</g>
 				<path
-					d="M785.49 287.512L794.979 317.134H825.685L800.843 335.442L810.332 365.064L785.49 346.757L760.648 365.064L770.137 335.442L745.295 317.134H776.001L785.49 287.512Z"
-					fill="white"/>
+					d="M760.596 218.376L740.963 275.094C740.288 277.043 738.452 278.351 736.389 278.351H671.716C670.676 278.351 669.664 278.016 668.829 277.396L592.479 220.678C588.736 217.898 590.702 211.953 595.365 211.953H756.022C759.349 211.953 761.684 215.232 760.596 218.376Z"
+					fill="url(#paint0_linear)" stroke="#8083E6" stroke-width="2.42014"/>
+				<path
+					d="M845.688 435.658L796.697 400.985C795.013 399.793 792.759 399.799 791.082 401.001L728.752 445.653C727.907 446.258 727.279 447.12 726.962 448.11L697.925 538.681C696.502 543.122 701.563 546.809 705.353 544.094L845.71 443.544C848.415 441.606 848.404 437.58 845.688 435.658Z"
+					fill="url(#paint1_linear)" stroke="#8083E6" stroke-width="2.42014"/>
+				<path
+					d="M884.14 432.735L857.789 357.276C857.055 355.174 857.849 352.843 859.713 351.627L963.025 284.202C967.15 281.51 965.086 275.095 960.166 275.313L837.243 280.752C835.065 280.848 833.091 279.477 832.422 277.402L808.492 203.22C808.184 202.263 808.181 201.233 808.484 200.274L867.268 14.5175C868.692 10.0169 875.058 10.0088 876.493 14.5056L938.462 208.595C939.102 210.601 940.967 211.963 943.073 211.963H1149.35C1154.04 211.963 1155.99 217.967 1152.19 220.722L985.791 341.423C984.097 342.652 983.384 344.83 984.025 346.822L1047.3 543.674C1048.74 548.152 1043.59 551.845 1039.81 549.046L885.829 435.029C885.048 434.451 884.46 433.652 884.14 432.735Z"
+					fill="url(#paint2_linear)" stroke="#8083E6" stroke-width="2.42014"/>
 			</g>
-			<path
-				d="M760.596 218.376L740.963 275.094C740.288 277.043 738.452 278.351 736.389 278.351H671.716C670.676 278.351 669.664 278.016 668.829 277.396L592.479 220.678C588.736 217.898 590.702 211.953 595.365 211.953H756.022C759.349 211.953 761.684 215.232 760.596 218.376Z"
-				fill="url(#paint0_linear)" stroke="#8083E6" stroke-width="2.42014"/>
-			<path
-				d="M845.688 435.658L796.697 400.985C795.013 399.793 792.759 399.799 791.082 401.001L728.752 445.653C727.907 446.258 727.279 447.12 726.962 448.11L697.925 538.681C696.502 543.122 701.563 546.809 705.353 544.094L845.71 443.544C848.415 441.606 848.404 437.58 845.688 435.658Z"
-				fill="url(#paint1_linear)" stroke="#8083E6" stroke-width="2.42014"/>
-			<path
-				d="M884.14 432.735L857.789 357.276C857.055 355.174 857.849 352.843 859.713 351.627L963.025 284.202C967.15 281.51 965.086 275.095 960.166 275.313L837.243 280.752C835.065 280.848 833.091 279.477 832.422 277.402L808.492 203.22C808.184 202.263 808.181 201.233 808.484 200.274L867.268 14.5175C868.692 10.0169 875.058 10.0088 876.493 14.5056L938.462 208.595C939.102 210.601 940.967 211.963 943.073 211.963H1149.35C1154.04 211.963 1155.99 217.967 1152.19 220.722L985.791 341.423C984.097 342.652 983.384 344.83 984.025 346.822L1047.3 543.674C1048.74 548.152 1043.59 551.845 1039.81 549.046L885.829 435.029C885.048 434.451 884.46 433.652 884.14 432.735Z"
-				fill="url(#paint2_linear)" stroke="#8083E6" stroke-width="2.42014"/>
-			<g filter="url(#filter2_d)">
+			<g filter="url(#filter2_d)" data-aos="fade-down" data-aos-duration="1000">
 				<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="30" y="247" width="565" height="167">
 					<path
 						d="M140.02 296.462C139.557 295.85 137.939 294.702 135.166 293.019C132.392 291.335 128.925 289.575 124.765 287.739C120.604 285.749 116.059 284.142 111.128 282.918C106.197 281.541 101.266 280.852 96.3353 280.852C82.7755 280.852 75.9956 285.367 75.9956 294.396C75.9956 299.906 78.9233 303.808 84.7787 306.104C90.7881 308.4 99.3401 311.155 110.434 314.368C120.913 317.276 129.927 320.643 137.477 324.469C145.182 328.142 151.114 333.116 155.274 339.391C159.435 345.513 161.515 353.624 161.515 363.725C161.515 372.908 159.82 380.713 156.43 387.141C153.04 393.416 148.417 398.543 142.562 402.522C136.707 406.348 130.081 409.179 122.685 411.016C115.442 412.699 107.892 413.541 100.033 413.541C87.8604 413.541 75.5333 411.781 63.0521 408.261C50.5709 404.588 39.5535 399.614 30 393.339L46.6416 360.511C47.258 361.276 49.2611 362.73 52.6511 364.873C56.0411 366.863 60.2785 369.005 65.3634 371.301C70.4484 373.596 75.9956 375.586 82.0051 377.27C88.1686 378.8 94.4092 379.565 100.727 379.565C114.133 379.565 120.835 375.509 120.835 367.398C120.835 363.266 119.063 360.052 115.519 357.756C112.129 355.308 107.43 353.242 101.42 351.558C95.4108 349.722 88.6309 347.656 81.0805 345.36C65.9798 340.769 54.8083 335.182 47.5662 328.602C40.4781 322.021 36.934 312.608 36.934 300.365C36.934 288.887 39.6306 279.245 45.0237 271.44C50.5709 263.481 57.9672 257.513 67.2125 253.534C76.4579 249.401 86.5507 247.335 97.491 247.335C109.048 247.335 119.988 249.325 130.312 253.304C140.636 257.13 149.419 261.109 156.661 265.241L140.02 296.462Z"
@@ -249,21 +260,338 @@
 				</linearGradient>
 			</defs>
 		</svg>
+		<div class="orbit">
+			<svg class="orbit__small-star orbit__small-star--1" width="72" height="72" viewBox="0 0 72 72" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__small-star-blur" filter="url(#filter0_f1)">
+					<path
+						d="M36.1227 24.9316L38.9264 33.6099H47.9994L40.6592 38.9734L43.4629 47.6518L36.1227 42.2883L28.7826 47.6518L31.5863 38.9734L24.2461 33.6099H33.319L36.1227 24.9316Z"
+						fill="#AECDFF"/>
+					<path
+						d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f111)">
+					<path
+						d="M36.1456 30.878L37.4781 35.0379H41.7903L38.3017 37.6089L39.6342 41.7688L36.1456 39.1979L32.657 41.7688L33.9896 37.6089L30.501 35.0379H34.8131L36.1456 30.878Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f1" x="0.246094" y="0.93158" width="71.7533" height="70.7202" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f111" x="9.50098" y="9.87799" width="53.2893" height="52.8908"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+			<svg class="orbit__small-star orbit__small-star--2" width="72" height="72" viewBox="0 0 72 72" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__small-star-blur" filter="url(#filter0_f1)">
+					<path
+						d="M36.1227 24.9316L38.9264 33.6099H47.9994L40.6592 38.9734L43.4629 47.6518L36.1227 42.2883L28.7826 47.6518L31.5863 38.9734L24.2461 33.6099H33.319L36.1227 24.9316Z"
+						fill="#AECDFF"/>
+					<path
+						d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f111)">
+					<path
+						d="M36.1456 30.878L37.4781 35.0379H41.7903L38.3017 37.6089L39.6342 41.7688L36.1456 39.1979L32.657 41.7688L33.9896 37.6089L30.501 35.0379H34.8131L36.1456 30.878Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f1" x="0.246094" y="0.93158" width="71.7533" height="70.7202" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f111" x="9.50098" y="9.87799" width="53.2893" height="52.8908"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+			<svg class="orbit__small-star orbit__small-star--3" width="72" height="72" viewBox="0 0 72 72" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__small-star-blur" filter="url(#filter0_f1)">
+					<path
+						d="M36.1227 24.9316L38.9264 33.6099H47.9994L40.6592 38.9734L43.4629 47.6518L36.1227 42.2883L28.7826 47.6518L31.5863 38.9734L24.2461 33.6099H33.319L36.1227 24.9316Z"
+						fill="#AECDFF"/>
+					<path
+						d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f111)">
+					<path
+						d="M36.1456 30.878L37.4781 35.0379H41.7903L38.3017 37.6089L39.6342 41.7688L36.1456 39.1979L32.657 41.7688L33.9896 37.6089L30.501 35.0379H34.8131L36.1456 30.878Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f1" x="0.246094" y="0.93158" width="71.7533" height="70.7202" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f111" x="9.50098" y="9.87799" width="53.2893" height="52.8908"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+			<svg class="orbit__small-star orbit__small-star--4" width="72" height="72" viewBox="0 0 72 72" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__small-star-blur" filter="url(#filter0_f1)">
+					<path
+						d="M36.1227 24.9316L38.9264 33.6099H47.9994L40.6592 38.9734L43.4629 47.6518L36.1227 42.2883L28.7826 47.6518L31.5863 38.9734L24.2461 33.6099H33.319L36.1227 24.9316Z"
+						fill="#AECDFF"/>
+					<path
+						d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M36.1227 26.558L38.4507 33.7636L38.5625 34.1099H38.9264H46.4676L40.3642 38.5697L40.0723 38.7831L40.1834 39.1271L42.5132 46.3386L36.4177 41.8846L36.1227 41.669L35.8278 41.8846L29.7323 46.3386L32.0621 39.1271L32.1732 38.7831L31.8813 38.5697L25.7778 34.1099H33.319H33.683L33.7948 33.7636L36.1227 26.558Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f111)">
+					<path
+						d="M36.1456 30.878L37.4781 35.0379H41.7903L38.3017 37.6089L39.6342 41.7688L36.1456 39.1979L32.657 41.7688L33.9896 37.6089L30.501 35.0379H34.8131L36.1456 30.878Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f1" x="0.246094" y="0.93158" width="71.7533" height="70.7202" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f111" x="9.50098" y="9.87799" width="53.2893" height="52.8908"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+
+			<svg class="orbit__big-star orbit__big-star--1" width="87" height="85" viewBox="0 0 87 85" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__big-star-blur" filter="url(#filter0_f222)">
+					<path
+						d="M43.4554 24.1648L47.9698 38.1383H62.5787L50.7599 46.7745L55.2743 60.748L43.4554 52.1119L31.6365 60.748L36.1509 46.7745L24.332 38.1383H38.941L43.4554 24.1648Z"
+						fill="#AECDFF"/>
+					<path
+						d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f333)">
+					<path
+						d="M43.4921 33.7395L45.6377 40.4377H52.5809L46.9637 44.5774L49.1093 51.2755L43.4921 47.1358L37.8749 51.2755L40.0205 44.5774L34.4033 40.4377H41.3465L43.4921 33.7395Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f222" x="0.332031" y="0.164795" width="86.2467" height="84.5832"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f333" x="13.4033" y="12.7395" width="60.1776" height="59.536" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+			<svg class="orbit__big-star orbit__big-star--2" width="87" height="85" viewBox="0 0 87 85" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__big-star-blur" filter="url(#filter0_f222)">
+					<path
+						d="M43.4554 24.1648L47.9698 38.1383H62.5787L50.7599 46.7745L55.2743 60.748L43.4554 52.1119L31.6365 60.748L36.1509 46.7745L24.332 38.1383H38.941L43.4554 24.1648Z"
+						fill="#AECDFF"/>
+					<path
+						d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f333)">
+					<path
+						d="M43.4921 33.7395L45.6377 40.4377H52.5809L46.9637 44.5774L49.1093 51.2755L43.4921 47.1358L37.8749 51.2755L40.0205 44.5774L34.4033 40.4377H41.3465L43.4921 33.7395Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f222" x="0.332031" y="0.164795" width="86.2467" height="84.5832"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f333" x="13.4033" y="12.7395" width="60.1776" height="59.536" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+			<svg class="orbit__big-star orbit__big-star--3" width="87" height="85" viewBox="0 0 87 85" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__big-star-blur" filter="url(#filter0_f222)">
+					<path
+						d="M43.4554 24.1648L47.9698 38.1383H62.5787L50.7599 46.7745L55.2743 60.748L43.4554 52.1119L31.6365 60.748L36.1509 46.7745L24.332 38.1383H38.941L43.4554 24.1648Z"
+						fill="#AECDFF"/>
+					<path
+						d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f333)">
+					<path
+						d="M43.4921 33.7395L45.6377 40.4377H52.5809L46.9637 44.5774L49.1093 51.2755L43.4921 47.1358L37.8749 51.2755L40.0205 44.5774L34.4033 40.4377H41.3465L43.4921 33.7395Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f222" x="0.332031" y="0.164795" width="86.2467" height="84.5832"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f333" x="13.4033" y="12.7395" width="60.1776" height="59.536" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+			<svg class="orbit__big-star orbit__big-star--4" width="87" height="85" viewBox="0 0 87 85" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__big-star-blur" filter="url(#filter0_f222)">
+					<path
+						d="M43.4554 24.1648L47.9698 38.1383H62.5787L50.7599 46.7745L55.2743 60.748L43.4554 52.1119L31.6365 60.748L36.1509 46.7745L24.332 38.1383H38.941L43.4554 24.1648Z"
+						fill="#AECDFF"/>
+					<path
+						d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f333)">
+					<path
+						d="M43.4921 33.7395L45.6377 40.4377H52.5809L46.9637 44.5774L49.1093 51.2755L43.4921 47.1358L37.8749 51.2755L40.0205 44.5774L34.4033 40.4377H41.3465L43.4921 33.7395Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f222" x="0.332031" y="0.164795" width="86.2467" height="84.5832"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f333" x="13.4033" y="12.7395" width="60.1776" height="59.536" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+			<svg class="orbit__big-star orbit__big-star--5" width="87" height="85" viewBox="0 0 87 85" fill="none"
+					 xmlns="http://www.w3.org/2000/svg">
+				<g class="orbit__big-star-blur" filter="url(#filter0_f222)">
+					<path
+						d="M43.4554 24.1648L47.9698 38.1383H62.5787L50.7599 46.7745L55.2743 60.748L43.4554 52.1119L31.6365 60.748L36.1509 46.7745L24.332 38.1383H38.941L43.4554 24.1648Z"
+						fill="#AECDFF"/>
+					<path
+						d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+						stroke="#F2F2F2"/>
+				</g>
+				<path
+					d="M43.4554 25.7912L47.494 38.2921L47.6059 38.6383H47.9698H61.047L50.4649 46.3708L50.1729 46.5841L50.2841 46.9282L54.3246 59.4348L43.7504 51.7082L43.4554 51.4926L43.1604 51.7082L32.5862 59.4348L36.6267 46.9282L36.7379 46.5841L36.4459 46.3708L25.8638 38.6383H38.941H39.3049L39.4168 38.2921L43.4554 25.7912Z"
+					fill="#88F7FF" stroke="white"/>
+				<g filter="url(#filter1_f333)">
+					<path
+						d="M43.4921 33.7395L45.6377 40.4377H52.5809L46.9637 44.5774L49.1093 51.2755L43.4921 47.1358L37.8749 51.2755L40.0205 44.5774L34.4033 40.4377H41.3465L43.4921 33.7395Z"
+						fill="white"/>
+				</g>
+				<defs>
+					<filter id="filter0_f222" x="0.332031" y="0.164795" width="86.2467" height="84.5832"
+									filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+					</filter>
+					<filter id="filter1_f333" x="13.4033" y="12.7395" width="60.1776" height="59.536" filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur"/>
+					</filter>
+				</defs>
+			</svg>
+
+			<div class="orbit__box orbit__first"></div>
+			<div class="orbit__box orbit__second"></div>
+		</div>
 	</div>
 
-	<div class="authentication">
+	<div class="authentication" data-aos="fade-up">
 		<div class="authentication__container">
 			<div class="authentication__flex">
-				<a href="#" class="authentication__link button button--violet authentication__btn">Регистрация</a>
-				<a href="#" class="authentication__link button authentication__btn">Вход</a>
-				<a href="#" class="authentication__link button authentication__btn">Смотреть</a>
+				<div class="authentication__btn-wrap">
+					<a href="#" class="authentication__link button button--violet authentication__btn">Регистрация</a>
+					<a href="#" class="authentication__link button authentication__btn">Вход</a>
+				</div>
+				<div class="authentication__btn-wrap">
+					<a href="#" class="authentication__link button button--svg-evlipses authentication__btn"><span>Смотреть</span>
+						<svg class="button__svg-eclipses" width="92" height="93" viewBox="0 0 92 93" fill="none"
+								 xmlns="http://www.w3.org/2000/svg">
+							<circle cx="46" cy="46.9619" r="30" fill="white"/>
+							<circle opacity="0.3" cx="46" cy="46.9619" r="46" fill="white"/>
+							<path d="M42 39.9619V53.9619L53 46.9619L42 39.9619Z" fill="#11032C"/>
+						</svg>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<h1 class="page__title"><span style="color: #00C3E1">STARS</span> – первая платформа
-		с вариативной системой маркетинга</h1>
-	<p class="page__subtitle">Бизнес-платформа, объединяющая в себе все партнерские и матричные программы маркетинга. </p>
+	<section class="page__container">
+		<h1 class="page__title"><span style="color: #00C3E1">STAR</span> – первая платформа
+			с вариативной системой маркетинга</h1>
+		<p class="page__subtitle">Бизнес-платформа, объединяющая в себе все партнерские и матричные программы
+			маркетинга. </p>
+	</section>
 
 	<section class="our-advantages">
 		<h2 class="our-advantages__title">Наши преимущества</h2>
@@ -284,24 +612,191 @@
 			</li>
 			<li class="our-advantages__item">
 				<p class="our-advantages__item-title">Доступность</p>
-				<p class="our-advantages__item-text">Платформа Stars ориентирована
+				<p class="our-advantages__item-text">Платформа Star ориентирована
 					на аудиторию различных стран, поэтому сайт и промо- материалы переведены на разные языки (перечислить).</p>
 			</li>
 			<li class="our-advantages__item">
 				<p class="our-advantages__item-title">Политика прозрачности</p>
-				<p class="our-advantages__item-text">Stars представлена во всех социальных сетях и регулярно освещает свою
+				<p class="our-advantages__item-text">Star представлена во всех социальных сетях и регулярно освещает свою
 					деятельность. Создатели проекта открыты пользователям и вместе с ними развивают платформу. </p>
 			</li>
 			<li class="our-advantages__item">
-				<p class="our-advantages__item-title">Связь между партнерами&nbsp;Stars</p>
+				<p class="our-advantages__item-title">Связь между партнерами&nbsp;Star</p>
 				<p class="our-advantages__item-text">В личный кабинет встроен общий чат, чтобы все партнеры могли общаться друг
 					с другом напрямую и обмениваться опытом.</p>
 			</li>
 		</ul>
 	</section>
+
+	<section class="star">
+		<div class="star__flex">
+			<div class="star__item">
+				<div class="star__wrap">
+					<p class="strars__counter">6 789</p>
+					<p class="star__text">Всего человек</p>
+				</div>
+				<img src="/img/star-blur.png" alt="" class="strars__img-blur">
+			</div>
+			<div class="star__item">
+				<div class="star__wrap">
+					<p class="strars__counter">367</p>
+					<p class="star__text">Новых за сутки</p>
+				</div>
+				<img src="/img/star-blur.png" alt="" class="strars__img-blur">
+			</div>
+			<div class="star__item">
+				<div class="star__wrap">
+					<p class="strars__counter">105 789 968₽</p>
+					<p class="star__text">Всего заработано</p>
+				</div>
+				<img src="/img/star-blur.png" alt="" class="strars__img-blur">
+			</div>
+			<div class="star__item">
+				<div class="star__wrap">
+					<p class="strars__counter">2 345</p>
+					<p class="star__text">Активации</p>
+				</div>
+				<img src="/img/star-blur.png" alt="" class="strars__img-blur">
+			</div>
+		</div>
+	</section>
+
+	<div class="solar-system">
+		<div class="solar-system__orbit solar-system__orbit--1">
+			<div class="solar-system__orbit solar-system__orbit--2">
+				<div class="solar-system__orbit solar-system__orbit--3"></div>
+			</div>
+		</div>
+
+
+		<div class="solar-system__list-of-planets">
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--1">
+				<img src="/img/planet-1.png" class="solar-system__planet solar-system__planet--1">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Вариативный маркетинг</p>
+					<p class="solar-system__planet-description">Stars объединяет в себе различные варианты матричного
+						маркетинга</p>
+				</div>
+			</div>
+
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--2">
+				<img src="/img/planet-2.png" class="solar-system__planet solar-system__planet--2">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Функция Build up</p>
+					<p class="solar-system__planet-description">Самостоятельное управление структурой вплоть до расстановки
+						звеньев матрицы</p>
+				</div>
+			</div>
+
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--3">
+				<img src="/img/planet-3.png" class="solar-system__planet solar-system__planet--3">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Лучшая команда</p>
+					<p class="solar-system__planet-description">В личный кабинет встроен общий чат, чтобы все партнеры могли
+						общаться друг с другом напрямую и обмениваться опытом. </p>
+				</div>
+			</div>
+
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--4">
+				<img src="/img/planet-4.png" class="solar-system__planet solar-system__planet--4">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Клоны</p>
+					<p class="solar-system__planet-description">Виртуальные аккаунты, которые приносят доход
+						и помогают закрывать столы матриц</p>
+				</div>
+			</div>
+
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--5">
+				<img src="/img/planet-5.png" class="solar-system__planet solar-system__planet--5">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Переливы</p>
+					<p class="solar-system__planet-description">Реализована система переливов от вышестоящих кураторов </p>
+				</div>
+			</div>
+
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--6">
+				<img src="/img/planet-6.png" class="solar-system__planet solar-system__planet--6">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Система бесплатного обучения</p>
+					<p class="solar-system__planet-description">Бесплатная школа сетевых предпринимателей, доступная каждому
+						пользователю Stars</p>
+				</div>
+			</div>
+
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--7">
+				<img src="/img/planet-7.png" class="solar-system__planet solar-system__planet--7">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Продукты Stars</p>
+					<p class="solar-system__planet-description">На основе платформы реализованы такие продукты как автопрограмма и
+						т.д. </p>
+				</div>
+			</div>
+
+			<div class="solar-system__planet-wrapper solar-system__planet-wrapper--8">
+				<img src="/img/planet-8.png" class="solar-system__planet solar-system__planet--8">
+				<div class="solar-system__planet-info">
+					<p class="solar-system__planet-title">Сообщество сетевых предпринимателей</p>
+					<p class="solar-system__planet-description">Первое независимое коммьюнити сетевых предпринимателей
+						в России и территории СНГ</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<section class="stars">
+		<img src="/img/stars_svg.svg" alt="" class="stars__img">
+		<div class="stars__wrap">
+			<p class="stars__text">Займи свое место среди звезд!</p>
+			<button class="stars__button button button--violet">Начать</button>
+		</div>
+	</section>
+
+	<section class="useful-materials">
+		<h2 class="useful-materials__title">Полезные материалы </h2>
+		<div class="useful-materials__flex">
+			<div class="useful-materials__btn-wrap">
+				<div class="useful-materials__dropdown-wrap">
+					<button class="button button--violet useful-materials__dropdown-trigger">Скачать</button>
+					<div class="useful-materials__dropdown">
+						<ul class="useful-materials__dropdown-list">
+							<li class="useful-materials__dropdown-list-item">
+								<a download="" href="/img/star.png" class="useful-materials__dropdown-link">English</a>
+							</li>
+
+							<li class="useful-materials__dropdown-list-item">
+								<a download="" href="/img/star.png" class="useful-materials__dropdown-link">Русский</a>
+							</li>
+
+							<li class="useful-materials__dropdown-list-item">
+								<a download="" href="/img/star.png" class="useful-materials__dropdown-link">Қазақша</a>
+							</li>
+
+							<li class="useful-materials__dropdown-list-item">
+								<a download="" href="/img/star.png" class="useful-materials__dropdown-link">Монгол</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="useful-materials__btn-watch button button--svg-evlipses"><span>Смотреть</span>
+					<svg class="button__svg-eclipses" width="92" height="93" viewBox="0 0 92 93" fill="none"
+							 xmlns="http://www.w3.org/2000/svg">
+						<circle cx="46" cy="46.9619" r="30" fill="white"/>
+						<circle opacity="0.3" cx="46" cy="46.9619" r="46" fill="white"/>
+						<path d="M42 39.9619V53.9619L53 46.9619L42 39.9619Z" fill="#11032C"/>
+					</svg>
+				</a>
+			</div>
+			<div class="useful-materials__img-wrap">
+				<img src="/img/stars-pic.jpg" alt="" class="useful-materials__img">
+			</div>
+		</div>
+	</section>
+
+
 	<footer class="footer">
 		<div class="footer__container">
-			<p class="footer__title">Официальные каналы STARS</p>
+			<p class="footer__title">Официальные каналы STAR</p>
 
 			<div class="footer__social">
 				<a href="#" class="footer__social-link">
@@ -395,7 +890,7 @@
 
 </div>
 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/script.min.js"></script>
 </body>
 </html>

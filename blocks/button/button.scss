@@ -16,6 +16,8 @@
 	text-decoration: unset;
 	transition: 0.3s;
 	font-weight: 700;
+	outline: transparent;
+	cursor: pointer;
 
 	&:hover {
 		color: $hover-color;
@@ -30,5 +32,31 @@
 			color: #fff;
 			border-color: $second-color;
 		}
+	}
+
+	&--svg-evlipses {
+		padding-right: 100px;
+		margin-right: 18px !important;
+
+		@media (max-width: 550px) {
+			padding-right: 65px;
+			padding-left: 20px;
+		}
+	}
+
+	@media (max-width: 550px) {
+		font-size: 12px;
+	}
+}
+
+.button__svg-eclipses {
+	position: absolute;
+	top: 50%;
+	right: -18px;
+	transform: translateY(-50%);
+
+	@media (max-width: 550px) {
+		width: 68px;
+		right: -13px;
 	}
 }
