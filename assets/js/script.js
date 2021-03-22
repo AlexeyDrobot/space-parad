@@ -29,4 +29,13 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
 		document.querySelector('body').classList.toggle('no-scroll');
 	}
 
+
+
+	function sayHi() {
+		document.querySelector('.authentication--animate').classList.remove('authentication--animate');
+
+	}
+
+	setTimeout(sayHi, 1000);
+
 });

@@ -6,6 +6,8 @@
 .header {
 	background-color: $main-color;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.52);
+	position: relative;
+	z-index: 1;
 
 	&--transform-none {
 		transition-duration: unset !important;

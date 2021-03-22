@@ -57,4 +57,15 @@
 
 .stars__img {
 	width: 100%;
+
+	animation: 20s linear infinite stars-spinning;
+}
+
+@keyframes stars-spinning {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
