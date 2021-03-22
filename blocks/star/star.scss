@@ -77,23 +77,6 @@
 	z-index: 0;
 	width: calc(100% + 20px);
 	height: calc(100% + 20px);
-	animation: ease-in-out 3s example infinite;
-	opacity: 0;
-}
-
-@keyframes example {
-	0% {
-		opacity: 0.3;
-	}
-	35% {
-		opacity: 1;
-	}
-	70% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0.3;
-	}
 }
 
 .strars__counter {

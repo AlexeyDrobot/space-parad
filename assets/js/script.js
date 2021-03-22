@@ -30,12 +30,5 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
 	}
 
 
-
-	function sayHi() {
-		document.querySelector('.authentication--animate').classList.remove('authentication--animate');
-
-	}
-
-	setTimeout(sayHi, 1000);
-
+	document.querySelector('.authentication--animate').classList.remove('authentication--animate');
 });

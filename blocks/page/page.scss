@@ -4,7 +4,7 @@
 @import "../../assets/styles/mixins.scss";
 
 .page {
-	background-color: $bg-color;
+	background: $bg-color url(../img/bg-stars.jpg) repeat-y 50% 50% / contain;
 	font-family: "Raleway", sans-serif;
 	color: #fff;
 	font-size: 14px;

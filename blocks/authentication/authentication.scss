@@ -8,7 +8,7 @@
 	padding-top: 30px;
 	padding-bottom: 30px;
 	transform: translateY(0);
-	animation: 1.5s ease-out animate-1;
+	animation: 1s ease-out animate-1;
 	position: relative;
 	z-index: unset;
 	opacity: 1;
@@ -22,7 +22,7 @@
 		right: 0;
 		width: 100%;
 		min-height: 0;
-		animation: 1.5s ease-out animate-2;
+		animation: 1s ease-out animate-2;
 	}
 
 	&--animate {
@@ -116,7 +116,7 @@
 	justify-content: space-between;
 	opacity: 1;
 	transform: translateY(0);
-	animation: 1.5s ease-out animate-3;
+	animation: 1s ease-out animate-3;
 	position: relative;
 	z-index: 1;
 
