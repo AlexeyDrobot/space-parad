@@ -207,6 +207,11 @@ gulp.task('block-css', function () {
 	.pipe(gulp.dest('build/blocks-css'))
 });
 
+gulp.task('block-scss', function () {
+	return gulp.src(['blocks/**/*.scss','assets/styles/**/*.scss'])
+		.pipe(gulp.dest('build/blocks-scss'))
+});
+
 
 // minifies images
 gulp.task("images", function () {

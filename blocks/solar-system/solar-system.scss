@@ -243,10 +243,11 @@
 	@media (max-width: 1240px) {
 		top: unset;
 		left: unset;
-		display: block;
+		display: block!important;
 		opacity: 1;
 		position: static;
 		transform: unset;
+		animation: unset!important;
 
 		width: auto;
 		background-color: unset;
